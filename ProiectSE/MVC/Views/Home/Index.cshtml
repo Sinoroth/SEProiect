@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Owners association</h1>
+    <p class="lead"></p>
+   
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>News feed</h2>
+        <p>
+           
+        </p>
+    </div>
+    <div class="col-md-4" style="float: right">
+        <h2>Options</h2>
+        <p>@Html.ActionLink("Apartment", "Apartment", "Home")</p>
+        <p>@Html.ActionLink("Bill", "Bill", "Home")</p>
+        <p>@Html.ActionLink("WaterConsumption", "WaterConsumption", "Home")</p>
+        <p>@Html.ActionLink("Payments", "Payments", "Home")</p>
+        <p>@Html.ActionLink("RemainingDebts", "RemainingDebts", "Home")</p>
+        <p>@Html.ActionLink("Contracts", "Contracts", "Home")</p>
+        <p>@Html.ActionLink("Employees", "Employees", "Home")</p>
+
+      
+    </div>
+   
+</div>

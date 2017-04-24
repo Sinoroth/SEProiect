@@ -1,0 +1,134 @@
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Views\ApplicationInsights.config
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\csc.exe
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\csc.exe.config
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\csc.rsp
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\csi.exe
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\csi.rsp
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\System.AppContext.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\System.Collections.Immutable.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\System.IO.FileSystem.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\vbc.exe
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\vbc.exe.config
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\vbc.rsp
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\VBCSCompiler.exe
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\roslyn\VBCSCompiler.exe.config
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\MVC.dll.config
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\MVC.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\MVC.pdb
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Antlr3.Runtime.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.Web.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.WindowsServer.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.ApplicationInsights.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Web.Infrastructure.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Newtonsoft.Json.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Helpers.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Mvc.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Optimization.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Razor.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.WebPages.Deployment.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.WebPages.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.WebPages.Razor.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\WebGrease.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Helpers.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Mvc.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Optimization.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.Razor.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.WebPages.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.WebPages.Deployment.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\System.Web.WebPages.Razor.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Antlr3.Runtime.pdb
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Newtonsoft.Json.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.ApplicationInsights.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.WindowsServer.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.Web.xml
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.dll
+c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.pdb
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Views\ApplicationInsights.config
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\csc.exe
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\csc.exe.config
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\csc.rsp
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\csi.exe
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\csi.rsp
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\System.AppContext.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\System.Collections.Immutable.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\System.IO.FileSystem.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\System.Reflection.Metadata.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\vbc.exe
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\vbc.exe.config
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\vbc.rsp
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\VBCSCompiler.exe
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\roslyn\VBCSCompiler.exe.config
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\MVC.dll.config
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\MVC.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\MVC.pdb
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Antlr3.Runtime.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.Agent.Intercept.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.DependencyCollector.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.Web.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.WindowsServer.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.ApplicationInsights.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.Web.Infrastructure.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Newtonsoft.Json.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Helpers.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Mvc.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Optimization.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Razor.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.WebPages.Deployment.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.WebPages.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.WebPages.Razor.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\WebGrease.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Helpers.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Mvc.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Optimization.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.Razor.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.WebPages.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.WebPages.Deployment.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\System.Web.WebPages.Razor.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Antlr3.Runtime.pdb
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Newtonsoft.Json.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.ApplicationInsights.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.DependencyCollector.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.WindowsServer.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Microsoft.AI.Web.xml
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\obj\Debug\MVC.dll
+E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\obj\Debug\MVC.pdb
