@@ -11,5 +11,8 @@ namespace WebAPI.Models
         public DbSet<Apartment> Apartments { get; set; }
         public DbSet<Contract> Contracts { get; set; }
         public DbSet<RemainingDebt> RemainingDebts { get; set; }
+        public DbSet<Payment> Payment { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }
