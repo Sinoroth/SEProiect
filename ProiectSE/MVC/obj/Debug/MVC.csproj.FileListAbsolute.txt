@@ -62,7 +62,6 @@ c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft
 c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.ServerTelemetryChannel.xml
 c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.WindowsServer.xml
 c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.AI.Web.xml
-c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
 c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.dll
 c:\users\iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.pdb
 E:\facultate 2017 anu 3 sem 2\SE project\Project\Project\ProiectSE\MVC\bin\Views\ApplicationInsights.config
@@ -199,3 +198,7 @@ C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\bin\Microsoft.AI.Web.xml
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.dll
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.pdb
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\EntityFramework.dll
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\EntityFramework.xml
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\EntityFramework.SqlServer.xml
