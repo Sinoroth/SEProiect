@@ -358,3 +358,9 @@ C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\System.Ne
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\System.Net.Http.Primitives.xml
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.csproj.App.config
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
+F:\Facultate ACE\AN III\Sem2\ProiectSE\ProiectSE\MVC\bin\System.Net.Http.Extensions.dll
+F:\Facultate ACE\AN III\Sem2\ProiectSE\ProiectSE\MVC\bin\System.Net.Http.Primitives.dll
+F:\Facultate ACE\AN III\Sem2\ProiectSE\ProiectSE\MVC\bin\System.Net.Http.Extensions.xml
+F:\Facultate ACE\AN III\Sem2\ProiectSE\ProiectSE\MVC\bin\System.Net.Http.Primitives.xml
+F:\Facultate ACE\AN III\Sem2\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.csproj.App.config
+F:\Facultate ACE\AN III\Sem2\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
