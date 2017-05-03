@@ -12,44 +12,44 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-    public class NewsFeedController : ApiController
+    public class EmployeesController : ApiController
     {
         private OwnersAssociationContext db = new OwnersAssociationContext();
 
-        // GET: api/NewsFeed
-        public IQueryable<NewsFeed> GetNewsFeed()
+        // GET: api/Employees
+        public IQueryable<Employee> GetEmployees()
         {
-            return db.NewsFeed;
+            return db.Employees;
         }
 
-        // GET: api/NewsFeed/5
-        [ResponseType(typeof(NewsFeed))]
-        public IHttpActionResult GetNewsFeed(int id)
+        // GET: api/Employees/5
+        [ResponseType(typeof(Employee))]
+        public IHttpActionResult GetEmployee(int id)
         {
-            NewsFeed newsFeed = db.NewsFeed.Find(id);
-            if (newsFeed == null)
+            Employee employee = db.Employees.Find(id);
+            if (employee == null)
             {
                 return NotFound();
             }
 
-            return Ok(newsFeed);
+            return Ok(employee);
         }
 
-        // PUT: api/NewsFeed/5
+        // PUT: api/Employees/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutNewsFeed(int id, NewsFeed newsFeed)
+        public IHttpActionResult PutEmployee(int id, Employee employee)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != newsFeed.NewsId)
+            if (id != employee.EmployeeId)
             {
                 return BadRequest();
             }
 
-            db.Entry(newsFeed).State = EntityState.Modified;
+            db.Entry(employee).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WebAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!NewsFeedExists(id))
+                if (!EmployeeExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/NewsFeed
-        [ResponseType(typeof(NewsFeed))]
-        public IHttpActionResult PostNewsFeed(NewsFeed newsFeed)
+        // POST: api/Employees
+        [ResponseType(typeof(Employee))]
+        public IHttpActionResult PostEmployee(Employee employee)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.NewsFeed.Add(newsFeed);
+            db.Employees.Add(employee);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = newsFeed.NewsId}, newsFeed);
+            return CreatedAtRoute("DefaultApi", new { id = employee.EmployeeId }, employee);
         }
 
-        // DELETE: api/NewsFeed/5
-        [ResponseType(typeof(NewsFeed))]
-        public IHttpActionResult DeleteNewsFeed(int id)
+        // DELETE: api/Employees/5
+        [ResponseType(typeof(Employee))]
+        public IHttpActionResult DeleteEmployee(int id)
         {
-            NewsFeed newsFeed = db.NewsFeed.Find(id);
-            if (newsFeed == null)
+            Employee employee = db.Employees.Find(id);
+            if (employee == null)
             {
                 return NotFound();
             }
 
-            db.NewsFeed.Remove(newsFeed);
+            db.Employees.Remove(employee);
             db.SaveChanges();
 
-            return Ok(newsFeed);
+            return Ok(employee);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WebAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool NewsFeedExists(int id)
+        private bool EmployeeExists(int id)
         {
-            return db.NewsFeed.Count(e => e.NewsId == id) > 0;
+            return db.Employees.Count(e => e.EmployeeId == id) > 0;
         }
     }
 }

@@ -13,6 +13,7 @@ namespace WebAPI.Models
         public string BillType { get; set; }
         public string Month { get; set; }
         public decimal AmountOfMoneyOwed { get; set; }
+        public virtual Apartment Apartment { get; set; }
     }
 }
 

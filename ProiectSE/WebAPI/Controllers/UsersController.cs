@@ -12,44 +12,44 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-    public class EmployeeController : ApiController
+    public class UsersController : ApiController
     {
         private OwnersAssociationContext db = new OwnersAssociationContext();
 
-        // GET: api/Employee
-        public IQueryable<Employee> GetEmployee()
+        // GET: api/Users
+        public IQueryable<User> GetUsers()
         {
-            return db.Employee;
+            return db.Users;
         }
 
-        // GET: api/Employee/5
-        [ResponseType(typeof(Employee))]
-        public IHttpActionResult GetEmployee(int id)
+        // GET: api/Users/5
+        [ResponseType(typeof(User))]
+        public IHttpActionResult GetUser(int id)
         {
-            Employee employee = db.Employee.Find(id);
-            if (employee == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return Ok(employee);
+            return Ok(user);
         }
 
-        // PUT: api/Employee/5
+        // PUT: api/Users/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutEmployee(int id, Employee employee)
+        public IHttpActionResult PutUser(int id, User user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != employee.EmployeeId)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
 
-            db.Entry(employee).State = EntityState.Modified;
+            db.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WebAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmployeeExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Employee
-        [ResponseType(typeof(Employee))]
-        public IHttpActionResult PostEmployee(Employee employee)
+        // POST: api/Users
+        [ResponseType(typeof(User))]
+        public IHttpActionResult PostUser(User user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Employee.Add(employee);
+            db.Users.Add(user);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = employee.EmployeeId }, employee);
+            return CreatedAtRoute("DefaultApi", new { id = user.UserId }, user);
         }
 
-        // DELETE: api/Employee/5
-        [ResponseType(typeof(Employee))]
-        public IHttpActionResult DeleteEmployee(int id)
+        // DELETE: api/Users/5
+        [ResponseType(typeof(User))]
+        public IHttpActionResult DeleteUser(int id)
         {
-            Employee employee = db.Employee.Find(id);
-            if (employee == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            db.Employee.Remove(employee);
+            db.Users.Remove(user);
             db.SaveChanges();
 
-            return Ok(employee);
+            return Ok(user);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WebAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool EmployeeExists(int id)
+        private bool UserExists(int id)
         {
-            return db.Employee.Count(e => e.EmployeeId == id) > 0;
+            return db.Users.Count(e => e.UserId == id) > 0;
         }
     }
 }

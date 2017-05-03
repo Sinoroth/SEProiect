@@ -10,7 +10,7 @@ namespace WebAPI.Models
     {
         public int ContractId { get; set; }
         public string Supplier { get; set; }
-        public DateTime ContractPeriod { get; set; }
+        public string ContractPeriod { get; set; }
         public string ServicesFacilitiesOffered { get; set; }
         public decimal Cost { get; set; }
     }

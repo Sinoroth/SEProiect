@@ -12,15 +12,16 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-    public class BillController : ApiController
+    public class BillsController : ApiController
     {
         private OwnersAssociationContext db = new OwnersAssociationContext();
 
-        // GET: api/Bill
+        // GET: api/Bills
         public IQueryable<Bill> GetBills()
         {
             return db.Bills;
         }
+
         // GET: api/Bills/5
         [ResponseType(typeof(Bill))]
         public IHttpActionResult GetBill(int id)
@@ -71,7 +72,7 @@ namespace WebAPI.Controllers
 
         // POST: api/Bills
         [ResponseType(typeof(Bill))]
-        public IHttpActionResult PostBills(Bill bill)
+        public IHttpActionResult PostBill(Bill bill)
         {
             if (!ModelState.IsValid)
             {
@@ -88,7 +89,7 @@ namespace WebAPI.Controllers
         [ResponseType(typeof(Bill))]
         public IHttpActionResult DeleteBill(int id)
         {
-            Bill bill= db.Bills.Find(id);
+            Bill bill = db.Bills.Find(id);
             if (bill == null)
             {
                 return NotFound();
@@ -99,6 +100,7 @@ namespace WebAPI.Controllers
 
             return Ok(bill);
         }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -112,12 +114,5 @@ namespace WebAPI.Controllers
         {
             return db.Bills.Count(e => e.BillId == id) > 0;
         }
-        
     }
 }
-
-       
-
-
-
-        

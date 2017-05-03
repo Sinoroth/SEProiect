@@ -8,8 +8,8 @@ namespace WebAPI.Models
 {
     public class NewsFeed
     {
-        public int NewsId { get; set; }
+        public int NewsFeedId { get; set; }
         public string News { get; set; }
-        public DateTime Data { get; set; }
+        public DateTime Date { get; set; }
     }
 }

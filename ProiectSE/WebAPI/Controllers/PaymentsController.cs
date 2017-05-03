@@ -12,44 +12,44 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
-    public class UserController : ApiController
+    public class PaymentsController : ApiController
     {
         private OwnersAssociationContext db = new OwnersAssociationContext();
 
-        // GET: api/Users
-        public IQueryable<User> GetUser()
+        // GET: api/Payments
+        public IQueryable<Payment> GetPayments()
         {
-            return db.User;
+            return db.Payments;
         }
 
-        // GET: api/Users/5
-        [ResponseType(typeof(User))]
-        public IHttpActionResult GetUser(int id)
+        // GET: api/Payments/5
+        [ResponseType(typeof(Payment))]
+        public IHttpActionResult GetPayment(int id)
         {
-            User user = db.User.Find(id);
-            if (user == null)
+            Payment payment = db.Payments.Find(id);
+            if (payment == null)
             {
                 return NotFound();
             }
 
-            return Ok(user);
+            return Ok(payment);
         }
 
-        // PUT: api/Users/5
+        // PUT: api/Payments/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutUser(int id, User user)
+        public IHttpActionResult PutPayment(int id, Payment payment)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != user.UserId)
+            if (id != payment.PaymentId)
             {
                 return BadRequest();
             }
 
-            db.Entry(user).State = EntityState.Modified;
+            db.Entry(payment).State = EntityState.Modified;
 
             try
             {
@@ -57,7 +57,7 @@ namespace WebAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserExists(id))
+                if (!PaymentExists(id))
                 {
                     return NotFound();
                 }
@@ -70,35 +70,35 @@ namespace WebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Users
-        [ResponseType(typeof(User))]
-        public IHttpActionResult PostUser(User user)
+        // POST: api/Payments
+        [ResponseType(typeof(Payment))]
+        public IHttpActionResult PostPayment(Payment payment)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.User.Add(user);
+            db.Payments.Add(payment);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = user.UserId }, user);
+            return CreatedAtRoute("DefaultApi", new { id = payment.PaymentId }, payment);
         }
 
-        // DELETE: api/Users/5
-        [ResponseType(typeof(User))]
-        public IHttpActionResult DeleteUser(int id)
+        // DELETE: api/Payments/5
+        [ResponseType(typeof(Payment))]
+        public IHttpActionResult DeletePayment(int id)
         {
-            User user = db.User.Find(id);
-            if (user == null)
+            Payment payment = db.Payments.Find(id);
+            if (payment == null)
             {
                 return NotFound();
             }
 
-            db.User.Remove(user);
+            db.Payments.Remove(payment);
             db.SaveChanges();
 
-            return Ok(user);
+            return Ok(payment);
         }
 
         protected override void Dispose(bool disposing)
@@ -110,9 +110,9 @@ namespace WebAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool UserExists(int id)
+        private bool PaymentExists(int id)
         {
-            return db.User.Count(e => e.UserId == id) > 0;
+            return db.Payments.Count(e => e.PaymentId == id) > 0;
         }
     }
 }

@@ -343,3 +343,7 @@ E:\facultate 2017 anu 3 sem 2\ProiectSE\ProiectSE\MVC\bin\Microsoft.AI.Web.xml
 E:\facultate 2017 anu 3 sem 2\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
 E:\facultate 2017 anu 3 sem 2\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.dll
 E:\facultate 2017 anu 3 sem 2\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.pdb
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\bin\EntityFramework.dll
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\bin\EntityFramework.SqlServer.dll
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\bin\EntityFramework.xml
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\MVC\bin\EntityFramework.SqlServer.xml
