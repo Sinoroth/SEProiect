@@ -481,5 +481,18 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Plugin.RestClient.RestClient`1">
+            <summary>
+            RestClient implements methods for calling CRUD operations
+            using HTTP.
+            </summary>
+        </member>
+        <member name="T:Plugin.RestClient.TaskModel">
+            <summary>
+            Sample model to test the RestClient object 
+            with the web service available on:
+            http://taskmodel.azurewebsites.net/api/TaskModels/
+            </summary>
+        </member>
     </members>
 </doc>

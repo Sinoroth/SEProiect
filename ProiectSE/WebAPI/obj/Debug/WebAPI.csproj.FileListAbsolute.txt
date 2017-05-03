@@ -313,3 +313,11 @@ C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\Microsoft.AI.Wind
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\Microsoft.AI.Web.xml
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.pdb
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\WebAPI.xml
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\Swashbuckle.Core.dll
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\System.Net.Http.Extensions.dll
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\System.Net.Http.Primitives.dll
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\WebActivatorEx.dll
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\System.Net.Http.Extensions.xml
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\System.Net.Http.Primitives.xml
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\obj\Debug\WebAPI.csproj.App.config
