@@ -16,6 +16,7 @@ namespace WebAPI.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Bill> Bills { get; set; }
         public DbSet<NewsFeed> NewsFeeds { get; set; }
+        public DbSet<WaterConsumption> WaterConsumptions { get; set; }
 
     }
 }

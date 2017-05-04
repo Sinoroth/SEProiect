@@ -17,6 +17,6 @@ namespace WebAPI.Models
         public virtual ICollection<Bill> Bills { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }
         public virtual ICollection<RemainingDebt> RemainingDebts { get; set; }
-        //public virtual ICollection<WaterConsumption> WaterConsumptions { get; set; }
+        public virtual ICollection<WaterConsumption> WaterConsumptions { get; set; }
     }
 }

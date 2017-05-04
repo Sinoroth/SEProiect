@@ -162,6 +162,7 @@
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\RemainingDebt.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\WaterConsumption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RestClient\RestClient.cs" />
     <Compile Include="RestClient\TaskModel.cs" />
