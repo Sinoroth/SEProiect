@@ -1,0 +1,50 @@
+﻿@model MVC.Models.Contract
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contract</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Supplier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Supplier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractPeriod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractPeriod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServicesFacilitiesOffered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServicesFacilitiesOffered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContractId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

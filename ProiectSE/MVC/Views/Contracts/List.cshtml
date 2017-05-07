@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MVC.Models.Contract>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Contracts</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Supplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContractPeriod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServicesFacilitiesOffered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Supplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContractPeriod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServicesFacilitiesOffered)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContractId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContractId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContractId })
+        </td>
+    </tr>
+}
+
+</table>

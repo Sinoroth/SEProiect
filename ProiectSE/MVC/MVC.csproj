@@ -153,12 +153,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ApartmentsController.cs" />
+    <Compile Include="Controllers\ContractsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RemainingDebtsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Apartment.cs" />
     <Compile Include="Models\Contract.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\RemainingDebt.cs" />
     <Compile Include="Models\User.cs" />
@@ -211,8 +215,24 @@
     <Content Include="Views\Home\WaterConsumption.cshtml" />
     <Content Include="Views\Home\Payments.cshtml" />
     <Content Include="Views\Home\RemainingDebts.cshtml" />
-    <Content Include="Views\Home\Contracts.cshtml" />
     <Content Include="Views\Home\Employees.cshtml" />
+    <Content Include="Views\View.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Contracts\Create.cshtml" />
+    <Content Include="Views\Contracts\Delete.cshtml" />
+    <Content Include="Views\Contracts\Details.cshtml" />
+    <Content Include="Views\Contracts\Edit.cshtml" />
+    <Content Include="Views\Contracts\List.cshtml" />
+    <Content Include="Views\Apartments\Create.cshtml" />
+    <Content Include="Views\Apartments\Delete.cshtml" />
+    <Content Include="Views\Apartments\Details.cshtml" />
+    <Content Include="Views\Apartments\Edit.cshtml" />
+    <Content Include="Views\Apartments\List.cshtml" />
+    <Content Include="Views\RemainingDebts\Create.cshtml" />
+    <Content Include="Views\RemainingDebts\Delete.cshtml" />
+    <Content Include="Views\RemainingDebts\Details.cshtml" />
+    <Content Include="Views\RemainingDebts\Edit.cshtml" />
+    <Content Include="Views\RemainingDebts\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

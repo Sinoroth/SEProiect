@@ -1,0 +1,50 @@
+﻿@model MVC.Models.Apartment
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<div>
+    <h4>Apartment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApartmentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApartmentNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfOccupants)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfOccupants)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountOfMoneyOwed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountOfMoneyOwed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ApartmentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

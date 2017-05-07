@@ -72,7 +72,6 @@ C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\Micros
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\bin\Microsoft.AI.Web.xml
-C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\obj\Debug\WebAPI.pdb
 F:\Facultate ACE\AN III\Sem2\ProiectSE\ProiectSE\WebAPI\bin\ApplicationInsights.config

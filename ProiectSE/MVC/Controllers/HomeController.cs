@@ -29,10 +29,10 @@ namespace MVC.Controllers
         {
             return View();
         }
-        public ActionResult Apartment()
-        {
-            return View();
-        }
+        //public ActionResult Apartment()
+        //{
+        //    return View();
+        //}
         public ActionResult Bill()
         {
             return View();
@@ -41,18 +41,18 @@ namespace MVC.Controllers
         {
             return View();
         }
-        public ActionResult RemainingDebts()
-        {
-            return View();
-        }
+        //public ActionResult RemainingDebts()
+        //{
+        //    return View();
+        //}
         public ActionResult Payments()
         {
             return View();
         }
-        public ActionResult Contracts()
-        {
-            return View();
-        }
+        //public ActionResult Contracts()
+        //{
+        //    return View();
+        //}
         public ActionResult Employees()
         {
             return View();
