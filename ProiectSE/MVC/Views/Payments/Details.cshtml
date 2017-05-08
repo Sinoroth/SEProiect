@@ -1,4 +1,4 @@
-﻿@model MVC.Models.Employee
+﻿@model MVC.Models.Payment
 
 @{
     ViewBag.Title = "Details";
@@ -7,36 +7,44 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Employee</h4>
+    <h4>Payment</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.EmployeeName)
+            @Html.DisplayNameFor(model => model.ApartmentId)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.EmployeeName)
+            @Html.DisplayFor(model => model.ApartmentId)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Function)
+            @Html.DisplayNameFor(model => model.ServicesToBePaid)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Function)
+            @Html.DisplayFor(model => model.ServicesToBePaid)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Salary)
+            @Html.DisplayNameFor(model => model.AmountOfMoneyToBePaid)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Salary)
+            @Html.DisplayFor(model => model.AmountOfMoneyToBePaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paid)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PaymentId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

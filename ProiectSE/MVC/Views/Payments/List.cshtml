@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MVC.Models.Employee>
+﻿@model IEnumerable<MVC.Models.Payment>
 
 @{
     ViewBag.Title = "List";
@@ -12,13 +12,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EmployeeName)
+            @Html.DisplayNameFor(model => model.Apartment.ApartmentNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Function)
+            @Html.DisplayNameFor(model => model.ServicesToBePaid)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Salary)
+            @Html.DisplayNameFor(model => model.AmountOfMoneyToBePaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Paid)
         </th>
         <th></th>
     </tr>
@@ -26,18 +29,21 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.EmployeeName)
+            @Html.DisplayFor(modelItem => item.Apartment.ApartmentNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Function)
+            @Html.DisplayFor(modelItem => item.ServicesToBePaid)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Salary)
+            @Html.DisplayFor(modelItem => item.AmountOfMoneyToBePaid)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EmployeeId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeId })
+            @Html.DisplayFor(modelItem => item.Paid)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PaymentId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PaymentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PaymentId })
         </td>
     </tr>
 }

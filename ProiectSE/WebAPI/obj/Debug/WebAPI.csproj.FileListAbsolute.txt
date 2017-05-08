@@ -496,3 +496,9 @@ C:\Users\Andra Serban\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebA
 C:\Users\Andra Serban\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
 C:\Users\Andra Serban\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.dll
 C:\Users\Andra Serban\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.pdb
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\System.Net.Http.Extensions.dll
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\System.Net.Http.Primitives.dll
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\System.Net.Http.Extensions.xml
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\System.Net.Http.Primitives.xml
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.csproj.App.config
+C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache

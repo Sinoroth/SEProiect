@@ -13,9 +13,9 @@ namespace MVC.Models
         public int NumberOfOccupants { get; set; }
         public decimal AmountOfMoneyOwed { get; set; }
         public virtual User User { get; set; }
-        //public virtual ICollection<Bill> Bills { get; set; }
+        public virtual ICollection<Bill> Bills { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }
         public virtual ICollection<RemainingDebt> RemainingDebts { get; set; }
-        //public virtual ICollection<WaterConsumption> WaterConsumptions { get; set; }
+        public virtual ICollection<WaterConsumption> WaterConsumptions { get; set; }
     }
 }

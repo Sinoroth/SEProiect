@@ -18,8 +18,10 @@ namespace MVC.Controllers
             payment.AmountOfMoneyToBePaid = 100;
             payment.ServicesToBePaid = "water";
             payment.Paid = "yes";
+
             List<Payment> paymentList = new List<Payment>();
             paymentList.Add(payment);
+
             return View(paymentList);
         }
     }
