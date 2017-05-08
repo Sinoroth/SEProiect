@@ -162,6 +162,7 @@
     <Compile Include="Controllers\PaymentsController.cs" />
     <Compile Include="Controllers\RemainingDebtsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\WaterConsumptionsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,6 +266,11 @@
     <Content Include="Views\Payments\Details.cshtml" />
     <Content Include="Views\Payments\Edit.cshtml" />
     <Content Include="Views\Payments\List.cshtml" />
+    <Content Include="Views\WaterConsumptions\Create.cshtml" />
+    <Content Include="Views\WaterConsumptions\Delete.cshtml" />
+    <Content Include="Views\WaterConsumptions\Details.cshtml" />
+    <Content Include="Views\WaterConsumptions\Edit.cshtml" />
+    <Content Include="Views\WaterConsumptions\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
