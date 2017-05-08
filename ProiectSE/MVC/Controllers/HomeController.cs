@@ -33,10 +33,10 @@ namespace MVC.Controllers
         //{
         //    return View();
         //}
-        public ActionResult Bill()
-        {
-            return View();
-        }
+        //public ActionResult Bill()
+        //{
+        //    return View();
+        //}
         public ActionResult WaterConsumption()
         {
             return View();
