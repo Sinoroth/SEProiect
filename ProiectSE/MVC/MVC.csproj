@@ -154,15 +154,19 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ApartmentsController.cs" />
+    <Compile Include="Controllers\BillsController.cs" />
     <Compile Include="Controllers\ContractsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsFeedsController.cs" />
     <Compile Include="Controllers\RemainingDebtsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Apartment.cs" />
+    <Compile Include="Models\Bill.cs" />
     <Compile Include="Models\Contract.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\NewsFeed.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\RemainingDebt.cs" />
     <Compile Include="Models\User.cs" />
@@ -233,6 +237,16 @@
     <Content Include="Views\RemainingDebts\Details.cshtml" />
     <Content Include="Views\RemainingDebts\Edit.cshtml" />
     <Content Include="Views\RemainingDebts\List.cshtml" />
+    <Content Include="Views\Bills\Create.cshtml" />
+    <Content Include="Views\Bills\Delete.cshtml" />
+    <Content Include="Views\Bills\Details.cshtml" />
+    <Content Include="Views\Bills\Edit.cshtml" />
+    <Content Include="Views\Bills\List.cshtml" />
+    <Content Include="Views\NewsFeeds\Create.cshtml" />
+    <Content Include="Views\NewsFeeds\Delete.cshtml" />
+    <Content Include="Views\NewsFeeds\Details.cshtml" />
+    <Content Include="Views\NewsFeeds\Edit.cshtml" />
+    <Content Include="Views\NewsFeeds\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
