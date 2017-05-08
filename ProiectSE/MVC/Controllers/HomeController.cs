@@ -25,10 +25,10 @@ namespace MVC.Controllers
         {
             return View();
         }
-        public ActionResult MyProfile()
-        {
-            return View();
-        }
+        //public ActionResult MyProfile()
+        //{
+        //    return View();
+        //}
         //public ActionResult Apartment()
         //{
         //    return View();
