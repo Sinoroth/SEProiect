@@ -16,6 +16,9 @@ namespace MVC.Controllers
     public class ApartmentsController : Controller
     {
         // GET: Apartments
+        //RestClient<Apartment> rc = new RestClient<Apartment>();
+        //rc.GetAsync();
+
         private const string WebServiceUrl = "http://localhost:55428/api/apartments";
 
         public async Task<List<Apartment>> GetAsync()
@@ -90,35 +93,68 @@ namespace MVC.Controllers
             apartment.UserId = 1;
             apartment.AmountOfMoneyOwed = 59;
             apartment.NumberOfOccupants = 3;
+            #region
+            //Bill bill = new Bill();
+            //bill.BillId = 1;
+            //bill.BillType = "elecricity";
+            //bill.Month = "January";
+            //bill.ApartmentId = 1;
+            //bill.AmountOfMoneyOwed = 200;
 
+            //Payment payment = new Payment();
+            //payment.PaymentId = 1;
+            //payment.ApartmentId = 1;
+            //payment.AmountOfMoneyToBePaid = 100;
+            //payment.ServicesToBePaid = "water";
+            //payment.Paid = "yes";
+
+            //WaterConsumption wCons = new WaterConsumption();
+            //wCons.WaterConsumptionId = 1;
+            //wCons.ApartmentId = 1;
+            //wCons.PricePerUnit = 20;
+            //wCons.Consumption = 10;
+            //wCons.AmountOfMoneyOwed = 200;
+
+            //RemainingDebt rd = new RemainingDebt();
+            //rd.RemainingDebtId = 1;
+            //rd.ApartmentId = 1;
+            //rd.Month = "March";
+            //rd.DebtTo = "Electricity";
+            //rd.AmountOfMoneyOwed = 70;
+
+            //apartment.Bills.Add(bill);
+            //apartment.Payments.Add(payment);
+            //apartment.WaterConsumptions.Add(wCons);
+            //apartment.RemainingDebts.Add(rd);
+            #endregion
             List<Apartment> apartmentList = new List<Apartment>();
 
             return View(apartmentList);
         }
 
-        //public ActionResult Create()
-        //{
-            
-        //    PostAsync();
-        //    return View();
-        //}
+        public ActionResult Create()
+        {
 
-        //public ActionResult Edit()
-        //{
-        //    PutAsync();
-        //    return View();
-        //}
+            //PostAsync();
+            return View();
+        }
 
-        //public ActionResult Details()
-        //{
-        //    GetByIdAsync();
-        //    return View();
-        //}
+        public ActionResult Edit()
+        {
+            //PutAsync();
+            return View();
+        }
 
-        //public ActionResult Delete()
-        //{
-        //    DeleteAsync();
-        //    return View();
-        //}
+        public ActionResult Details()
+        {
+            //GetByIdAsync();
+            return View();
+        }
+
+        public ActionResult Delete()
+        {
+            //DeleteAsync();
+            return View();
+        }
     }
 }

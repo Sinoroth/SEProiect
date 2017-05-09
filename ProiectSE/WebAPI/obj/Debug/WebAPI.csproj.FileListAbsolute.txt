@@ -502,3 +502,4 @@ C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\System.Net.Http.E
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\bin\System.Net.Http.Primitives.xml
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.csproj.App.config
 C:\Users\Iulia\Documents\GitHub\ProiectSE\ProiectSE\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyReference.cache

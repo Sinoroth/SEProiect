@@ -23,5 +23,20 @@ namespace MVC.Controllers
             userList.Add(user);
             return View(userList);
         }
+
+        public ActionResult Details()
+        {
+            User user = new User();
+            user.UserId = 1;
+            user.Name = "Stancu ALex";
+            user.Email = "ex@gmail.com";
+            user.PhoneNumber = "045";
+            user.Password = "pass";
+            user.Role = "user";
+            //List<User> userList = new List<User>();
+            //userList.Add(user);
+            return View(user);
+        }
     }
+
 }
