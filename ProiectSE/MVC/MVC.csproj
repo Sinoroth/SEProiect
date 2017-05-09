@@ -160,6 +160,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsFeedsController.cs" />
     <Compile Include="Controllers\PaymentsController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\RemainingDebtsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WaterConsumptionsController.cs" />
@@ -251,7 +252,7 @@
     <Content Include="Views\NewsFeeds\Details.cshtml" />
     <Content Include="Views\NewsFeeds\Edit.cshtml" />
     <Content Include="Views\NewsFeeds\List.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Register.cshtml" />
     <Content Include="Views\Users\Delete.cshtml" />
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
@@ -271,6 +272,7 @@
     <Content Include="Views\Payments\Details.cshtml" />
     <Content Include="Views\Payments\Edit.cshtml" />
     <Content Include="Views\Payments\List.cshtml" />
+    <Content Include="Views\Users\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

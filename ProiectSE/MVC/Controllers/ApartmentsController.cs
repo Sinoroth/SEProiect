@@ -17,6 +17,7 @@ namespace MVC.Controllers
     {
         // GET: Apartments
         //RestClient<Apartment> rc = new RestClient<Apartment>();
+        //rc.Web
         //rc.GetAsync();
 
         private const string WebServiceUrl = "http://localhost:55428/api/apartments";
