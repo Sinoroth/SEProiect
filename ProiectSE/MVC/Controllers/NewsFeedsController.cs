@@ -38,5 +38,21 @@ namespace MVC.Controllers
             return View(newsFeed);
         }
 
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+
+        public ActionResult Delete()
+        {
+            return View();
+        }
+
     }
 }

@@ -13,7 +13,7 @@ namespace Plugin.RestClient
     /// </summary>
     public class RestClient<T>
     {
-        private const string WebServiceUrl = "http://taskmodel.azurewebsites.net/api/TaskModels/";
+        public string WebServiceUrl = "http://taskmodel.azurewebsites.net/api/TaskModels/";
 
         public async Task<List<T>> GetAsync()
         {
@@ -22,6 +22,17 @@ namespace Plugin.RestClient
             var json = await httpClient.GetStringAsync(WebServiceUrl);
 
             var taskModels = JsonConvert.DeserializeObject<List<T>>(json);
+
+            return taskModels;
+        }
+
+        public async Task<T> GetByIdAsync(int id)
+        {
+            var httpClient = new HttpClient();
+
+            var json = await httpClient.GetStringAsync(WebServiceUrl + id);
+
+            var taskModels = JsonConvert.DeserializeObject<T>(json);
 
             return taskModels;
         }

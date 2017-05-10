@@ -23,5 +23,25 @@ namespace MVC.Controllers
 
             return View(wConsList);
         }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        public ActionResult Edit()
+        {
+            return View();
+        }
+
+        public ActionResult Details()
+        {
+            return View();
+        }
+
+        public ActionResult Delete()
+        {
+            return View();
+        }
     }
 }

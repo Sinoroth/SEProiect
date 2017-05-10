@@ -1,5 +1,6 @@
 ﻿using MVC.Models;
 using Newtonsoft.Json;
+using Plugin.RestClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,79 +15,59 @@ namespace MVC.Controllers
     public class ContractsController : Controller
     {
         // GET: Contracts
-        private const string WebServiceUrl = "http://localhost:55428/api/contracts";
-
-        public async Task<List<Apartment>> GetAsync()
+        public async Task<List<Contract>> GetContracts()
         {
-            var httpClient = new HttpClient();
-
-            var json = await httpClient.GetStringAsync(WebServiceUrl);
-
-            var taskModels = JsonConvert.DeserializeObject<List<Apartment>>(json);
-
-            return taskModels;
+            RestClient<Contract> rc = new RestClient<Contract>();
+            rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
+            var contractList = await rc.GetAsync();
+            return contractList;
         }
 
-        public async Task<Apartment> GetByIdAsync(int id)
+        public async Task<Contract> GetContractById(int id)
         {
-            var httpClient = new HttpClient();
-
-            var json = await httpClient.GetStringAsync(WebServiceUrl + id);
-
-            var taskModels = JsonConvert.DeserializeObject<Apartment>(json);
-
-            return taskModels;
+            RestClient<Contract> rc = new RestClient<Contract>();
+            rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
+            var contract = await rc.GetByIdAsync(id);
+            return contract;
         }
 
-        public async Task<bool> PostAsync(Apartment a)
+        public async Task<bool> PostContract(Contract c)
         {
-            var httpClient = new HttpClient();
-
-            var json = JsonConvert.SerializeObject(a);
-
-            HttpContent httpContent = new StringContent(json);
-
-            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-            var result = await httpClient.PostAsync(WebServiceUrl, httpContent);
-
-            return result.IsSuccessStatusCode;
+            RestClient<Contract> rc = new RestClient<Contract>();
+            rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
+            bool response = await rc.PostAsync(c);
+            return response;
         }
 
-        public async Task<bool> PutAsync(int id, Apartment a)
+        public async Task<bool> PutContract(int id, Contract c)
         {
-            var httpClient = new HttpClient();
-
-            var json = JsonConvert.SerializeObject(a);
-
-            HttpContent httpContent = new StringContent(json);
-
-            httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-            var result = await httpClient.PutAsync(WebServiceUrl + id, httpContent);
-
-            return result.IsSuccessStatusCode;
+            RestClient<Contract> rc = new RestClient<Contract>();
+            rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
+            bool response = await rc.PutAsync(id, c);
+            return response;
         }
 
-        public async Task<bool> DeleteAsync(int id, Apartment a)
+        public async Task<bool> DeleteContract(int id, Contract c)
         {
-            var httpClient = new HttpClient();
-
-            var response = await httpClient.DeleteAsync(WebServiceUrl + id);
-
-            return response.IsSuccessStatusCode;
+            RestClient<Contract> rc = new RestClient<Contract>();
+            rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
+            bool response = await rc.DeleteAsync(id, c);
+            return response;
         }
+
 
         public ActionResult List()
         {
-            Contract contract = new Contract();
-            contract.ContractId = 1;
-            contract.ContractPeriod = "10.05.2016 - 10.05.2017";
-            contract.Cost = 2000;
-            contract.Supplier = "Digi";
-            contract.ServicesFacilitiesOffered = "TV";
-            List<Contract> contractList = new List<Contract>();
-            contractList.Add(contract);
+
+            //Contract contract = new Contract();
+            //contract.ContractId = 1;
+            //contract.ContractPeriod = "10.05.2016 - 10.05.2017";
+            //contract.Cost = 2000;
+            //contract.Supplier = "Digi";
+            //contract.ServicesFacilitiesOffered = "TV";
+            //List<Contract> contractList = new List<Contract>();
+            //contractList.Add(contract);
+            Task<List<Contract>> contractList = GetContracts();
 
             return View(contractList);
         }
