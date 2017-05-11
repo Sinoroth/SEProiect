@@ -24,18 +24,18 @@ namespace Plugin.RestClient
             return taskModels;
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public T GetByIdAsync(int id)
         {
             var httpClient = new HttpClient();
 
-            var json = await httpClient.GetStringAsync(WebServiceUrl + id);
+            var json = httpClient.GetStringAsync(WebServiceUrl + id).Result;
 
             var taskModels = JsonConvert.DeserializeObject<T>(json);
 
             return taskModels;
         }
 
-        public async Task<bool> PostAsync(T t)
+        public bool PostAsync(T t)
         {
             var httpClient = new HttpClient();
 
@@ -45,12 +45,12 @@ namespace Plugin.RestClient
 
             httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var result = await httpClient.PostAsync(WebServiceUrl, httpContent);
+            var result = httpClient.PostAsync(WebServiceUrl, httpContent).Result;
 
             return result.IsSuccessStatusCode;
         }
 
-        public async Task<bool> PutAsync(int id, T t)
+        public bool PutAsync(int id, T t)
         {
             var httpClient = new HttpClient();
 
@@ -60,16 +60,16 @@ namespace Plugin.RestClient
 
             httpContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            var result = await httpClient.PutAsync(WebServiceUrl + id, httpContent);
+            var result = httpClient.PutAsync(WebServiceUrl + id, httpContent).Result;
 
             return result.IsSuccessStatusCode;
         }
 
-        public async Task<bool> DeleteAsync(int id, T t)
+        public bool DeleteAsync(int id, T t)
         {
             var httpClient = new HttpClient();
 
-            var response = await httpClient.DeleteAsync(WebServiceUrl + id);
+            var response = httpClient.DeleteAsync(WebServiceUrl + id).Result;
 
             return response.IsSuccessStatusCode;
         }

@@ -23,35 +23,35 @@ namespace MVC.Controllers
             return contractList;
         }
 
-        public async Task<Contract> GetContractById(int id)
+        public Contract GetContractById(int id)
         {
             RestClient<Contract> rc = new RestClient<Contract>();
             rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
-            var contract = await rc.GetByIdAsync(id);
+            var contract = rc.GetByIdAsync(id);
             return contract;
         }
 
-        public async Task<bool> PostContract(Contract c)
+        public bool PostContract(Contract c)
         {
             RestClient<Contract> rc = new RestClient<Contract>();
             rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
-            bool response = await rc.PostAsync(c);
+            bool response = rc.PostAsync(c);
             return response;
         }
 
-        public async Task<bool> PutContract(int id, Contract c)
+        public bool PutContract(int id, Contract c)
         {
             RestClient<Contract> rc = new RestClient<Contract>();
             rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
-            bool response = await rc.PutAsync(id, c);
+            bool response = rc.PutAsync(id, c);
             return response;
         }
 
-        public async Task<bool> DeleteContract(int id, Contract c)
+        public bool DeleteContract(int id, Contract c)
         {
             RestClient<Contract> rc = new RestClient<Contract>();
             rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
-            bool response = await rc.DeleteAsync(id, c);
+            bool response = rc.DeleteAsync(id, c);
             return response;
         }
 

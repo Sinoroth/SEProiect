@@ -24,35 +24,35 @@ namespace MVC.Controllers
             return apartmentList;
         }
 
-        public async Task<Apartment> GetApartmentById(int id)
+        public Apartment GetApartmentById(int id)
         {
             RestClient<Apartment> rc = new RestClient<Apartment>();
             rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
-            var apartment = await rc.GetByIdAsync(id);
+            var apartment = rc.GetByIdAsync(id);
             return apartment;
         }
 
-        public async Task<bool> PostApartment(Apartment a)
+        public bool PostApartment(Apartment a)
         {
             RestClient<Apartment> rc = new RestClient<Apartment>();
             rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
-            bool response = await rc.PostAsync(a);
+            bool response = rc.PostAsync(a);
             return response;
         }
 
-        public async Task<bool> PutApartment(int id, Apartment a)
+        public bool PutApartment(int id, Apartment a)
         {
             RestClient<Apartment> rc = new RestClient<Apartment>();
             rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
-            bool response = await rc.PutAsync(id, a);
+            bool response = rc.PutAsync(id, a);
             return response;
         }
 
-        public async Task<bool> DeleteApartment(int id, Apartment a)
+        public bool DeleteApartment(int id, Apartment a)
         {
             RestClient<Apartment> rc = new RestClient<Apartment>();
             rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
-            bool response = await rc.DeleteAsync(id, a);
+            bool response = rc.DeleteAsync(id, a);
             return response;
         }
 
@@ -120,7 +120,8 @@ namespace MVC.Controllers
 
         public ActionResult Details()
         {
-            //GetByIdAsync();
+            //Apartment apartment = new Models.Apartment();
+            //apartment = GetApartmentById(Models.Apartment.ApartmentId);
             return View();
         }
 

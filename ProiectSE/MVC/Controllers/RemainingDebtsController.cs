@@ -23,35 +23,35 @@ namespace MVC.Controllers
             return rdList;
         }
 
-        public async Task<RemainingDebt> GetRemainingDebtById(int id)
+        public RemainingDebt GetRemainingDebtById(int id)
         {
             RestClient<RemainingDebt> rc = new RestClient<RemainingDebt>();
             rc.WebServiceUrl = "http://localhost:55428/api/remainingdebts/";
-            var rd = await rc.GetByIdAsync(id);
+            var rd = rc.GetByIdAsync(id);
             return rd;
         }
 
-        public async Task<bool> PostRemainingDebt(RemainingDebt rd)
+        public bool PostRemainingDebt(RemainingDebt rd)
         {
             RestClient<RemainingDebt> rc = new RestClient<RemainingDebt>();
             rc.WebServiceUrl = "http://localhost:55428/api/remainingdebts/";
-            bool response = await rc.PostAsync(rd);
+            bool response = rc.PostAsync(rd);
             return response;
         }
 
-        public async Task<bool> PutRemainingDebt(int id, RemainingDebt rd)
+        public bool PutRemainingDebt(int id, RemainingDebt rd)
         {
             RestClient<RemainingDebt> rc = new RestClient<RemainingDebt>();
             rc.WebServiceUrl = "http://localhost:55428/api/remainingdebts/";
-            bool response = await rc.PutAsync(id, rd);
+            bool response = rc.PutAsync(id, rd);
             return response;
         }
 
-        public async Task<bool> DeleteRemainingDebt(int id, RemainingDebt rd)
+        public bool DeleteRemainingDebt(int id, RemainingDebt rd)
         {
             RestClient<RemainingDebt> rc = new RestClient<RemainingDebt>();
             rc.WebServiceUrl = "http://localhost:55428/api/remainingdebts/";
-            bool response = await rc.DeleteAsync(id, rd);
+            bool response = rc.DeleteAsync(id, rd);
             return response;
         }
 
@@ -76,9 +76,9 @@ namespace MVC.Controllers
 
             //List<RemainingDebt> rdList = new List<RemainingDebt>();
             //rdList.Add(rd);
-            //List<RemainingDebt> rdList = GetAsync();
+            List<RemainingDebt> rdList = GetRemainingDebts();
 
-            return View();
+            return View(rdList);
         }
 
         public ActionResult Create()
