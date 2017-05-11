@@ -15,12 +15,10 @@ namespace Plugin.RestClient
     {
         public string WebServiceUrl = "http://taskmodel.azurewebsites.net/api/TaskModels/";
 
-        public async Task<List<T>> GetAsync()
+        public  List<T> GetAsync()
         {
             var httpClient = new HttpClient();
-
-            var json = await httpClient.GetStringAsync(WebServiceUrl);
-
+            var json = httpClient.GetStringAsync(WebServiceUrl).Result;
             var taskModels = JsonConvert.DeserializeObject<List<T>>(json);
 
             return taskModels;

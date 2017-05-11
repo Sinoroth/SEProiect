@@ -16,11 +16,11 @@ namespace MVC.Controllers
     public class ApartmentsController : Controller
     {
         // GET: Apartments
-        public async Task<List<Apartment>> GetApartments()
+        public List<Apartment> GetApartments()
         {
             RestClient<Apartment> rc = new RestClient<Apartment>();
             rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
-            var apartmentList = await rc.GetAsync();
+            var apartmentList = rc.GetAsync();
             return apartmentList;
         }
 
@@ -100,8 +100,8 @@ namespace MVC.Controllers
             ////apartment.RemainingDebts.Add(rd);
             #endregion
             //List<Apartment> apartmentList = new List<Apartment>();
-            Task<List<Apartment>> apartmentList = GetApartments();
-
+            List<Apartment> apartmentList = GetApartments();
+            
             return View(apartmentList);
         }
 

@@ -15,11 +15,11 @@ namespace MVC.Controllers
     public class RemainingDebtsController : Controller
     {
         // GET: RemainingDebts
-        public async Task<List<RemainingDebt>> GetRemainingDebts()
+        public List<RemainingDebt> GetRemainingDebts()
         {
             RestClient<RemainingDebt> rc = new RestClient<RemainingDebt>();
             rc.WebServiceUrl = "http://localhost:55428/api/remainingdebts/";
-            var rdList = await rc.GetAsync();
+            var rdList =  rc.GetAsync();
             return rdList;
         }
 

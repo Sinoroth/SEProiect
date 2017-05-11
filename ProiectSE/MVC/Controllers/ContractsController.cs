@@ -15,11 +15,11 @@ namespace MVC.Controllers
     public class ContractsController : Controller
     {
         // GET: Contracts
-        public async Task<List<Contract>> GetContracts()
+        public List<Contract> GetContracts()
         {
             RestClient<Contract> rc = new RestClient<Contract>();
             rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
-            var contractList = await rc.GetAsync();
+            var contractList =  rc.GetAsync();
             return contractList;
         }
 
@@ -67,7 +67,7 @@ namespace MVC.Controllers
             //contract.ServicesFacilitiesOffered = "TV";
             //List<Contract> contractList = new List<Contract>();
             //contractList.Add(contract);
-            Task<List<Contract>> contractList = GetContracts();
+            List<Contract> contractList = GetContracts();
 
             return View(contractList);
         }
