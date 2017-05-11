@@ -515,4 +515,13 @@ C:\Users\Andra Serban\Documents\GitHub\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.csp
 C:\Users\Andra Serban\Documents\GitHub\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.dll
 C:\Users\Andra Serban\Documents\GitHub\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.pdb
 C:\Users\Ileana Ancuta\Documents\GitHub\ProiectSE\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
-C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.dll
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.dll
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Owin.dll
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.xml
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.xml
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache

@@ -28,6 +28,14 @@ namespace MVC.Controllers
             return user;
         }
 
+        public User GetUserByEmail(string email)
+        {
+            RestClient<User> rc = new RestClient<User>();
+            rc.WebServiceUrl = "http://localhost:55428/api/users/email/";
+            var user = rc.GetByEmailAsync(email);
+            return user;
+        }
+
         public bool PostUser(User u)
         {
             RestClient<User> rc = new RestClient<User>();
@@ -50,6 +58,19 @@ namespace MVC.Controllers
             rc.WebServiceUrl = "http://localhost:55428/api/users/";
             bool response = rc.DeleteAsync(id, u);
             return response;
+        }
+
+        public bool IsValid(string email, string pass)
+        {
+            User user = new User();
+            user = GetUserByEmail(email);
+            if (user == null)
+                return false;
+            else if(user.Password == pass)
+            {
+                return true;
+            }
+            return false;
         }
 
         public ActionResult List()
@@ -111,11 +132,11 @@ namespace MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //if (user.IsValid(user.Name, user.Password))
+                //if (IsValid(user.Name, user.Password))
                 //{
-                    //FormsAuthentication.SetAuthCookie(user.Name, user.RememberMe);
+                    //FormsAuthentication.SetAuthCookie(user.Name, );
                     return RedirectToAction("Index", "Home");
-                //}
+                
                 //else
                 //{
                 //    ModelState.AddModelError("", "Login data is incorrect!");
