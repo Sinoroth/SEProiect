@@ -64,9 +64,9 @@ namespace MVC.Controllers
         {
             List<User> user = new List<User>();
             user = GetUserByEmail(email);
-            if (user == null)
+            if (user.Count == 0)
                 return false;
-            else if(user[0].Password == pass)
+            else if (user[0].Password == pass)
             {
                 return true;
             }
@@ -101,10 +101,15 @@ namespace MVC.Controllers
             //List<User> userList = new List<User>();
             //userList.Add(user);
             //User user = new Models.User();
-            
-            //user = GetUserById(user.UserId);
 
-            return View();
+            //user = GetUserById(user.UserId);
+            //if (Request.Cookies["UserCookie"] != null)
+            
+                string email = Request.Cookies["UserCookie"].Value;
+                List<User> user = new List<User>();
+                user = GetUserByEmail(email);
+                return View(user[0]);
+            
         }
 
         public ActionResult Register()
