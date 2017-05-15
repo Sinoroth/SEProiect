@@ -135,7 +135,12 @@ namespace MVC.Controllers
             {
                 if (IsValid(user.Email, user.Password))
                 {
-                    FormsAuthentication.SetAuthCookie(user.Name, true);
+                    //FormsAuthentication.SetAuthCookie(user.Email, true);
+                    //String authUser = User.Identity.Name;
+                    HttpCookie userCookie = new HttpCookie("UserCookie");
+                    userCookie.Value = user.Email;
+                    userCookie.Expires = DateTime.Now.AddDays(100);
+                    Response.Cookies.Add(userCookie);
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -147,6 +152,7 @@ namespace MVC.Controllers
             return View(user);
         }
 
+        
         [HttpPost]
         public ActionResult Register(Models.User user)
         {
@@ -155,7 +161,8 @@ namespace MVC.Controllers
 
         public ActionResult Logout()
         {
-            FormsAuthentication.SignOut();
+            //FormsAuthentication.SignOut();
+            Response.Cookies.Remove("UserCookie");
             return RedirectToAction("Login", "Users");
         }
     }
