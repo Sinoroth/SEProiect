@@ -28,7 +28,7 @@ namespace MVC.Controllers
             return user;
         }
 
-        public User GetUserByEmail(string email)
+        public List<User> GetUserByEmail(string email)
         {
             RestClient<User> rc = new RestClient<User>();
             rc.WebServiceUrl = "http://localhost:55428/api/users/email/";
@@ -62,15 +62,16 @@ namespace MVC.Controllers
 
         public bool IsValid(string email, string pass)
         {
-            User user = new User();
+            List<User> user = new List<User>();
             user = GetUserByEmail(email);
             if (user == null)
                 return false;
-            else if(user.Password == pass)
+            else if(user[0].Password == pass)
             {
                 return true;
             }
-            return false;
+            else
+                return false;
         }
 
         public ActionResult List()
@@ -132,15 +133,16 @@ namespace MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //if (IsValid(user.Name, user.Password))
-                //{
-                    //FormsAuthentication.SetAuthCookie(user.Name, );
+                if (IsValid(user.Email, user.Password))
+                {
+                    FormsAuthentication.SetAuthCookie(user.Name, true);
                     return RedirectToAction("Index", "Home");
-                
-                //else
-                //{
-                //    ModelState.AddModelError("", "Login data is incorrect!");
-                //}
+                }
+
+                else
+                {
+                    ModelState.AddModelError("", "Login data is incorrect!");
+                }
             }
             return View(user);
         }
@@ -153,7 +155,7 @@ namespace MVC.Controllers
 
         public ActionResult Logout()
         {
-            //FormsAuthentication.SignOut();
+            FormsAuthentication.SignOut();
             return RedirectToAction("Login", "Users");
         }
     }

@@ -35,11 +35,14 @@ namespace WebAPI.Controllers
             return Ok(user);
         }
 
-        //GET and Verify user email and password
+        // GET: api/Users/Email/{email}
+        [HttpGet]
+        [Route("api/Users/Email/{email}/")]
         [ResponseType(typeof(User))]
-        public IQueryable GetUserByEmail(string email)
-        {      
-            return db.Users.Where(u => u.Email == email);
+        public IQueryable<User> GetUserByEmail(string email)
+        {
+            return db.Users.Where(t => t.Email == email);
+
         }
 
         // PUT: api/Users/5

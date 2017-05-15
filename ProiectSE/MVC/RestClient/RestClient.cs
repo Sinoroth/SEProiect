@@ -35,13 +35,13 @@ namespace Plugin.RestClient
             return taskModels;
         }
 
-        public T GetByEmailAsync(string email)
+        public List<T> GetByEmailAsync(string email)
         {
             var httpClient = new HttpClient();
 
-            var json = httpClient.GetStringAsync(WebServiceUrl + email).Result;
+            var json = httpClient.GetStringAsync(WebServiceUrl + email + "/").Result;
 
-            var taskModels = JsonConvert.DeserializeObject<T>(json);
+            var taskModels = JsonConvert.DeserializeObject<List<T>>(json);
 
             return taskModels;
         }
