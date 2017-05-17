@@ -13,6 +13,6 @@ namespace MVC.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
-
+        public virtual ICollection<Apartment> Apartments { get; set; }
     }
 }

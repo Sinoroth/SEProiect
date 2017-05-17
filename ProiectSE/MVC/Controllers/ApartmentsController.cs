@@ -100,9 +100,26 @@ namespace MVC.Controllers
             ////apartment.RemainingDebts.Add(rd);
             #endregion
             //List<Apartment> apartmentList = new List<Apartment>();
-            List<Apartment> apartmentList = GetApartments();
-            
-            return View(apartmentList);
+            UsersController uc = new UsersController();
+            string email = Request.Cookies["UserCookie"].Value;
+            List<User> user = new List<User>();
+            user = uc.GetUserByEmail(email);
+            if (user[0].Role == "user")
+            {
+                List<Apartment> apartmentList = new List<Apartment>();
+                foreach(var apartment in user[0].Apartments)
+                {
+                    apartmentList.Add(apartment);
+                }
+                return View(apartmentList);
+            }
+            else
+            {
+                List<Apartment> apartmentList = GetApartments();
+
+                return View(apartmentList);
+            }
+           // return View(apartmentList);
         }
 
         public ActionResult Create()
