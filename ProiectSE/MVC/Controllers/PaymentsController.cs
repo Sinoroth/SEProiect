@@ -62,8 +62,31 @@ namespace MVC.Controllers
 
             //List<Payment> paymentList = new List<Payment>();
             //paymentList.Add(payment);
-            List<Payment> paymentList = GetPayments();
-            return View(paymentList);
+
+            UsersController uc = new UsersController();
+            string email = Request.Cookies["UserCookie"].Value;
+            List<User> user = new List<User>();
+            user = uc.GetUserByEmail(email);
+            if (user[0].Role == "user")
+            {
+                List<Payment> paymentList = new List<Payment>();
+                foreach (var apartment in user[0].Apartments)
+                {
+                    foreach (var payment in apartment.Payments)
+                    {
+                        paymentList.Add(payment);
+                    }
+                }
+                return View(paymentList);
+            }
+            else
+            {
+                List<Payment> paymentList = new List<Payment>();
+
+                return View(paymentList);
+            }
+
+        
         }
 
         public ActionResult Create()
