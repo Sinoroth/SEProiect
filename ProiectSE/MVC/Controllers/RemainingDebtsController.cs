@@ -76,9 +76,28 @@ namespace MVC.Controllers
 
             //List<RemainingDebt> rdList = new List<RemainingDebt>();
             //rdList.Add(rd);
-            List<RemainingDebt> rdList = GetRemainingDebts();
+            UsersController uc = new UsersController();
+            string email = Request.Cookies["UserCookie"].Value;
+            List<User> user = new List<User>();
+            user = uc.GetUserByEmail(email);
+            if (user[0].Role == "user")
+            {
+                List<RemainingDebt> rdList = new List<RemainingDebt>();
+                foreach (var apartment in user[0].Apartments)
+                {
+                    foreach (var rd in apartment.RemainingDebts)
+                    {
+                        rdList.Add(rd);
+                    }
+                }
+                return View(rdList);
+            }
+            else
+            {
+                List<RemainingDebt> rdList = GetRemainingDebts();
 
-            return View(rdList);
+                return View(rdList);
+            }
         }
 
         public ActionResult Create()

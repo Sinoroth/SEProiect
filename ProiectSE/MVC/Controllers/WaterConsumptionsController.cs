@@ -61,9 +61,28 @@ namespace MVC.Controllers
             //wCons.AmountOfMoneyOwed = 200;
             //List<WaterConsumption> wConsList = new List<WaterConsumption>();
             //wConsList.Add(wCons);
-            List<WaterConsumption> wConsList = GetWaterConsumptions();
+            UsersController uc = new UsersController();
+            string email = Request.Cookies["UserCookie"].Value;
+            List<User> user = new List<User>();
+            user = uc.GetUserByEmail(email);
+            if (user[0].Role == "user")
+            {
+                List<WaterConsumption> wConsList = new List<WaterConsumption>();
+                foreach (var apartment in user[0].Apartments)
+                {
+                    foreach (var wc in apartment.WaterConsumptions)
+                    {
+                        wConsList.Add(wc);
+                    }
+                }
+                return View(wConsList);
+            }
+            else
+            {
+                List<WaterConsumption> wConsList = GetWaterConsumptions();
 
-            return View(wConsList);
+                return View(wConsList);
+            }
         }
 
         public ActionResult Create()
