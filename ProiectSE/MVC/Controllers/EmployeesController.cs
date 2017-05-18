@@ -43,13 +43,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        public bool DeleteEmployee(int id, Employee e)
-        {
-            RestClient<Employee> rc = new RestClient<Employee>();
-            rc.WebServiceUrl = "http://localhost:55428/api/employee/";
-            bool response = rc.DeleteAsync(id, e);
-            return response;
-        }
+        //public bool DeleteEmployee(int id, Employee e)
+        //{
+        //    RestClient<Employee> rc = new RestClient<Employee>();
+        //    rc.WebServiceUrl = "http://localhost:55428/api/employee/";
+        //    bool response = rc.DeleteAsync(id, e);
+        //    return response;
+        //}
 
         public ActionResult List()
         {

@@ -43,13 +43,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        public bool DeleteNewsFeed(int id, NewsFeed nf)
-        {
-            RestClient<NewsFeed> rc = new RestClient<NewsFeed>();
-            rc.WebServiceUrl = "http://localhost:55428/api/newsfeeds/";
-            bool response = rc.DeleteAsync(id, nf);
-            return response;
-        }
+        //public bool DeleteNewsFeed(int id, NewsFeed nf)
+        //{
+        //    RestClient<NewsFeed> rc = new RestClient<NewsFeed>();
+        //    rc.WebServiceUrl = "http://localhost:55428/api/newsfeeds/";
+        //    bool response = rc.DeleteAsync(id, nf);
+        //    return response;
+        //}
 
         public ActionResult List()
         {

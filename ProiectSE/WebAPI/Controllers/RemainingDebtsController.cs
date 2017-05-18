@@ -17,12 +17,14 @@ namespace WebAPI.Controllers
         private OwnersAssociationContext db = new OwnersAssociationContext();
 
         // GET: api/RemainingDebts
+        [HttpGet]
         public IQueryable<RemainingDebt> GetRemainingDebts()
         {
             return db.RemainingDebts;
         }
 
         // GET: api/RemainingDebts/5
+        [HttpGet]
         [ResponseType(typeof(RemainingDebt))]
         public IHttpActionResult GetRemainingDebt(int id)
         {
@@ -36,6 +38,7 @@ namespace WebAPI.Controllers
         }
 
         // PUT: api/RemainingDebts/5
+        [HttpPut]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutRemainingDebt(int id, RemainingDebt remainingDebt)
         {
@@ -71,6 +74,7 @@ namespace WebAPI.Controllers
         }
 
         // POST: api/RemainingDebts
+        [HttpPost]
         [ResponseType(typeof(RemainingDebt))]
         public IHttpActionResult PostRemainingDebt(RemainingDebt remainingDebt)
         {
@@ -86,6 +90,7 @@ namespace WebAPI.Controllers
         }
 
         // DELETE: api/RemainingDebts/5
+        [HttpDelete]
         [ResponseType(typeof(RemainingDebt))]
         public IHttpActionResult DeleteRemainingDebt(int id)
         {

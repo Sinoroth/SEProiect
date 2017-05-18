@@ -47,11 +47,11 @@ namespace MVC.Controllers
             return response;
         }
 
-        public bool DeleteRemainingDebt(int id, RemainingDebt rd)
+        public bool DeleteRemainingDebt(int id)
         {
             RestClient<RemainingDebt> rc = new RestClient<RemainingDebt>();
             rc.WebServiceUrl = "http://localhost:55428/api/remainingdebts/";
-            bool response = rc.DeleteAsync(id, rd);
+            bool response = rc.DeleteAsync(id);
             return response;
         }
 
@@ -102,27 +102,59 @@ namespace MVC.Controllers
 
         public ActionResult Create()
         {
-
-            //PostAsync();
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.RemainingDebt rd)
         {
-            //PutAsync();
+
+            PostRemainingDebt(rd);
             return View();
         }
 
-        public ActionResult Details()
+        
+        public ActionResult Edit(int id)
         {
-            //GetByIdAsync();
-            return View();
+
+            RemainingDebt rd = GetRemainingDebtById(id);
+           
+            return View(rd);
         }
 
-        public ActionResult Delete()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.RemainingDebt rd)
         {
-            //DeleteAsync();
-            return View();
+            PutRemainingDebt(rd.RemainingDebtId, rd);
+            return RedirectToAction("List");
         }
+
+        public ActionResult Details(int id)
+        {
+            RemainingDebt rd = GetRemainingDebtById(id);
+
+            return View(rd);
+        }
+
+        
+        public ActionResult Delete(int id)
+        {
+            RemainingDebt rd = GetRemainingDebtById(id);
+            //DeleteRemainingDebt(id);
+            return View(rd);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeleteRemainingDebt(id);
+            return RedirectToAction("List");
+
+        }
+
+        
     }
 }

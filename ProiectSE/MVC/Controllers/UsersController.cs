@@ -52,13 +52,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        public bool DeleteUser(int id, User u)
-        {
-            RestClient<User> rc = new RestClient<User>();
-            rc.WebServiceUrl = "http://localhost:55428/api/users/";
-            bool response = rc.DeleteAsync(id, u);
-            return response;
-        }
+        //public bool DeleteUser(int id, User u)
+        //{
+        //    RestClient<User> rc = new RestClient<User>();
+        //    rc.WebServiceUrl = "http://localhost:55428/api/users/";
+        //    bool response = rc.DeleteAsync(id, u);
+        //    return response;
+        //}
 
         public bool IsValid(string email, string pass)
         {

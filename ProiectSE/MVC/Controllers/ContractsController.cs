@@ -47,13 +47,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        public bool DeleteContract(int id, Contract c)
-        {
-            RestClient<Contract> rc = new RestClient<Contract>();
-            rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
-            bool response = rc.DeleteAsync(id, c);
-            return response;
-        }
+        //public bool DeleteContract(int id, Contract c)
+        //{
+        //    RestClient<Contract> rc = new RestClient<Contract>();
+        //    rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
+        //    bool response = rc.DeleteAsync(id, c);
+        //    return response;
+        //}
 
 
         public ActionResult List()

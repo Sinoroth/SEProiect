@@ -43,13 +43,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        public bool DeleteWaterConsumption(int id, WaterConsumption wc)
-        {
-            RestClient<WaterConsumption> rc = new RestClient<WaterConsumption>();
-            rc.WebServiceUrl = "http://localhost:55428/api/waterconsumptions/";
-            bool response = rc.DeleteAsync(id, wc);
-            return response;
-        }
+        //public bool DeleteWaterConsumption(int id, WaterConsumption wc)
+        //{
+        //    RestClient<WaterConsumption> rc = new RestClient<WaterConsumption>();
+        //    rc.WebServiceUrl = "http://localhost:55428/api/waterconsumptions/";
+        //    bool response = rc.DeleteAsync(id, wc);
+        //    return response;
+        //}
 
         public ActionResult List()
         {

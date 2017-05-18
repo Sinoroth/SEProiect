@@ -48,13 +48,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        public bool DeleteApartment(int id, Apartment a)
-        {
-            RestClient<Apartment> rc = new RestClient<Apartment>();
-            rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
-            bool response = rc.DeleteAsync(id, a);
-            return response;
-        }
+        //public bool DeleteApartment(int id, Apartment a)
+        //{
+        //    RestClient<Apartment> rc = new RestClient<Apartment>();
+        //    rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
+        //    bool response = rc.DeleteAsync(id, a);
+        //    return response;
+        //}
 
         public ActionResult List()
         {

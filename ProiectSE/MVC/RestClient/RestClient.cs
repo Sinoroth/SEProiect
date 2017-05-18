@@ -76,7 +76,7 @@ namespace Plugin.RestClient
             return result.IsSuccessStatusCode;
         }
 
-        public bool DeleteAsync(int id, T t)
+        public bool DeleteAsync(int id)
         {
             var httpClient = new HttpClient();
 
