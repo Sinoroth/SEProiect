@@ -43,13 +43,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        //public bool DeleteNewsFeed(int id, NewsFeed nf)
-        //{
-        //    RestClient<NewsFeed> rc = new RestClient<NewsFeed>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/newsfeeds/";
-        //    bool response = rc.DeleteAsync(id, nf);
-        //    return response;
-        //}
+        public bool DeleteNewsFeed(int id)
+        {
+            RestClient<NewsFeed> rc = new RestClient<NewsFeed>();
+            rc.WebServiceUrl = "http://localhost:55428/api/newsfeeds/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
         public ActionResult List()
         {
@@ -65,35 +65,60 @@ namespace MVC.Controllers
             return View(newsFeedList);
         }
 
-        public ActionResult Details()
-        {
-            NewsFeed newsFeed = new NewsFeed();
-            newsFeed.NewsFeedId = 1;
-            newsFeed.Date = new DateTime(2008, 1, 2, 6, 30, 15);
-            newsFeed.News = "Something";
-
-            //List<NewsFeed> newsFeedList = new List<NewsFeed>();
-
-            //newsFeedList.Add(newsFeed);
-
-            return View(newsFeed);
-        }
-
         public ActionResult Create()
         {
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.NewsFeed nf)
         {
-            return View();
+
+            PostNewsFeed(nf);
+            return RedirectToAction("List");
         }
 
 
-        public ActionResult Delete()
+        public ActionResult Edit(int id)
         {
-            return View();
+
+            NewsFeed nf = GetNewsFeedById(id);
+
+            return View(nf);
         }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.NewsFeed nf)
+        {
+
+            PutNewsFeed(nf.NewsFeedId, nf);
+            return RedirectToAction("List");
+        }
+
+        public ActionResult Details(int id)
+        {
+            NewsFeed nf = GetNewsFeedById(id);
+            return View(nf);
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            NewsFeed nf = GetNewsFeedById(id);
+            return View(nf);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeleteNewsFeed(id);
+            return RedirectToAction("List");
+
+        }
+
 
     }
 }

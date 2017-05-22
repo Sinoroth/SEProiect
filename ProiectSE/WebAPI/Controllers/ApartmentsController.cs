@@ -54,7 +54,7 @@ namespace WebAPI.Controllers
             Apartment ap = db.Apartments.Find(apartment.ApartmentId);
             ap.ApartmentNumber = apartment.ApartmentNumber;
             ap.NumberOfOccupants = apartment.NumberOfOccupants;
-            ap.UserId = apartment.UserId;
+            //ap.UserId = apartment.UserId;
             ap.AmountOfMoneyOwed = apartment.AmountOfMoneyOwed;
 
             try

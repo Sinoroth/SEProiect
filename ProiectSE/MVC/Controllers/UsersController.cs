@@ -178,12 +178,7 @@ namespace MVC.Controllers
             return View(user);
         }
 
-        
-        //[HttpPost]
-        //public ActionResult Register(Models.User user)
-        //{
-        //    return RedirectToAction("Index", "Home");
-        //}
+
 
         public ActionResult Logout()
         {

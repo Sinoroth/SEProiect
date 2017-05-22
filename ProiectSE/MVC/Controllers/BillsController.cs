@@ -63,8 +63,27 @@ namespace MVC.Controllers
             //List<Bill> billList = new List<Bill>();
 
             //billList.Add(bill);
-            List<Bill> billList = GetBills();
-            return View(billList);
+            UsersController uc = new UsersController();
+            string email = Request.Cookies["UserCookie"].Value;
+            List<User> user = new List<User>();
+            user = uc.GetUserByEmail(email);
+            if (user[0].Role == "user")
+            {
+                List<Bill> billList = new List<Bill>();
+                foreach (var apartment in user[0].Apartments)
+                {
+                    foreach (var b in apartment.Bills)
+                    {
+                        billList.Add(b);
+                    }
+                }
+                return View(billList);
+            }
+            else
+            {
+                List<Bill> billList = GetBills();
+                return View(billList);
+            }
         }
 
         public ActionResult Create()
@@ -77,7 +96,7 @@ namespace MVC.Controllers
         {
 
             PostBill(b);
-            return View();
+            return RedirectToAction("List");
         }
 
 

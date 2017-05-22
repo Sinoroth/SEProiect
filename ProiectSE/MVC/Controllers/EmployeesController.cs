@@ -75,7 +75,7 @@ namespace MVC.Controllers
         {
 
             PostEmployee(e);
-            return View();
+            return RedirectToAction("List");
         }
 
 

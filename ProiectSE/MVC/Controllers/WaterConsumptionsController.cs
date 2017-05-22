@@ -95,7 +95,7 @@ namespace MVC.Controllers
         {
 
             PostWaterConsumption(wc);
-            return View();
+            return RedirectToAction("List");
         }
 
 

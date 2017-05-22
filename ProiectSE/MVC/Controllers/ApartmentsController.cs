@@ -132,7 +132,7 @@ namespace MVC.Controllers
         {
 
             PostApartment(a);
-            return View();
+            return RedirectToAction("List");
         }
 
 

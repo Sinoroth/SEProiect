@@ -110,7 +110,7 @@ namespace MVC.Controllers
         {
 
             PostRemainingDebt(rd);
-            return View();
+            return RedirectToAction("List");
         }
 
         

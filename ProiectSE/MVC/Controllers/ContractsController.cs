@@ -82,7 +82,7 @@ namespace MVC.Controllers
         {
 
             PostContract(c);
-            return View();
+            return RedirectToAction("List");
         }
 
 
