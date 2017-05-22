@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
 
         // PUT: api/Bills/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutBill(int id, Bill bill)
+        public IHttpActionResult PutBill(int id, [FromBody]Bill bill)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +49,12 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(bill).State = EntityState.Modified;
+            //db.Entry(bill).State = EntityState.Modified;
+            Bill b = db.Bills.Find(bill.BillId);
+            b.BillType = bill.BillType;
+            b.Month = bill.Month;
+            b.AmountOfMoneyOwed = bill.AmountOfMoneyOwed;
+            
 
             try
             {

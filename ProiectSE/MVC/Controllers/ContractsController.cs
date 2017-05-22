@@ -47,13 +47,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        //public bool DeleteContract(int id, Contract c)
-        //{
-        //    RestClient<Contract> rc = new RestClient<Contract>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
-        //    bool response = rc.DeleteAsync(id, c);
-        //    return response;
-        //}
+        public bool DeleteContract(int id)
+        {
+            RestClient<Contract> rc = new RestClient<Contract>();
+            rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
 
         public ActionResult List()
@@ -74,36 +74,58 @@ namespace MVC.Controllers
 
         public ActionResult Create()
         {
-
-            //PostAsync();
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.Contract c)
         {
-            //PutAsync();
+
+            PostContract(c);
             return View();
         }
 
-        public ActionResult Details()
-        {
-            //GetByIdAsync();
-            Contract contract = new Contract();
-            contract.ContractId = 1;
-            contract.ContractPeriod = "10.05.2016 - 10.05.2017";
-            contract.Cost = 2000;
-            contract.Supplier = "Digi";
-            contract.ServicesFacilitiesOffered = "TV";
-            //List<Contract> contractList = new List<Contract>();
-            //contractList.Add(contract);
 
-            return View(contract);
+        public ActionResult Edit(int id)
+        {
+
+            Contract c = GetContractById(id);
+
+            return View(c);
         }
 
-        public ActionResult Delete()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.Contract c)
         {
-            //DeleteAsync();
-            return View();
+
+            PutContract(c.ContractId, c);
+            return RedirectToAction("List");
         }
+
+        public ActionResult Details(int id)
+        {
+            Contract c = GetContractById(id);
+
+            return View(c);
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            Contract c = GetContractById(id);
+            return View(c);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeleteContract(id);
+            return RedirectToAction("List");
+
+        }
+
     }
 }

@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
 
         // PUT: api/Contracts/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutContract(int id, Contract contract)
+        public IHttpActionResult PutContract(int id, [FromBody]Contract contract)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +49,12 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(contract).State = EntityState.Modified;
+            //db.Entry(contract).State = EntityState.Modified;
+            Contract c = db.Contracts.Find(contract.ContractId);
+            c.ContractPeriod = contract.ContractPeriod;
+            c.Cost = contract.Cost;
+            c.ServicesFacilitiesOffered = contract.ServicesFacilitiesOffered;
+            c.Supplier = contract.Supplier;
 
             try
             {

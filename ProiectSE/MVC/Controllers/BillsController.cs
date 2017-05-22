@@ -43,13 +43,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        //public bool DeleteBill(int id, Bill b)
-        //{
-        //    RestClient<Bill> rc = new RestClient<Bill>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/bills/";
-        //    bool response = rc.DeleteAsync(id, b);
-        //    return response;
-        //}
+        public bool DeleteBill(int id)
+        {
+            RestClient<Bill> rc = new RestClient<Bill>();
+            rc.WebServiceUrl = "http://localhost:55428/api/bills/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
         public ActionResult List()
         {
@@ -72,19 +72,55 @@ namespace MVC.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.Bill b)
         {
+
+            PostBill(b);
             return View();
         }
 
-        public ActionResult Details()
+
+        public ActionResult Edit(int id)
         {
-            return View();
+
+            Bill b = GetBillById(id);
+
+            return View(b);
         }
 
-        public ActionResult Delete()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.Bill b)
         {
-            return View();
+
+            PutBill(b.BillId, b);
+            return RedirectToAction("List");
         }
+
+        public ActionResult Details(int id)
+        {
+            Bill b = GetBillById(id);
+
+            return View(b);
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            Bill b = GetBillById(id);
+            return View(b);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeleteBill(id);
+            return RedirectToAction("List");
+
+        }
+
     }
 }

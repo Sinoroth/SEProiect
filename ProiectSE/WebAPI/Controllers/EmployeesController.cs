@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
 
         // PUT: api/Employees/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutEmployee(int id, Employee employee)
+        public IHttpActionResult PutEmployee(int id, [FromBody]Employee employee)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +49,11 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(employee).State = EntityState.Modified;
+            //db.Entry(employee).State = EntityState.Modified;
+            Employee e = db.Employees.Find(employee.EmployeeId);
+            e.EmployeeName = employee.EmployeeName;
+            e.Function = employee.Function;
+            e.Salary = employee.Salary;
 
             try
             {

@@ -22,7 +22,7 @@ namespace MVC.Controllers
         public Employee GetEmployeeById(int id)
         {
             RestClient<Employee> rc = new RestClient<Employee>();
-            rc.WebServiceUrl = "http://localhost:55428/api/employee/";
+            rc.WebServiceUrl = "http://localhost:55428/api/employees/";
             var employee = rc.GetByIdAsync(id);
             return employee;
         }
@@ -30,7 +30,7 @@ namespace MVC.Controllers
         public bool PostEmployee(Employee e)
         {
             RestClient<Employee> rc = new RestClient<Employee>();
-            rc.WebServiceUrl = "http://localhost:55428/api/employee/";
+            rc.WebServiceUrl = "http://localhost:55428/api/employees/";
             bool response = rc.PostAsync(e);
             return response;
         }
@@ -38,18 +38,18 @@ namespace MVC.Controllers
         public bool PutEmployee(int id, Employee e)
         {
             RestClient<Employee> rc = new RestClient<Employee>();
-            rc.WebServiceUrl = "http://localhost:55428/api/employee/";
+            rc.WebServiceUrl = "http://localhost:55428/api/employees/";
             bool response = rc.PutAsync(id, e);
             return response;
         }
 
-        //public bool DeleteEmployee(int id, Employee e)
-        //{
-        //    RestClient<Employee> rc = new RestClient<Employee>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/employee/";
-        //    bool response = rc.DeleteAsync(id, e);
-        //    return response;
-        //}
+        public bool DeleteEmployee(int id)
+        {
+            RestClient<Employee> rc = new RestClient<Employee>();
+            rc.WebServiceUrl = "http://localhost:55428/api/employees/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
         public ActionResult List()
         {
@@ -70,19 +70,55 @@ namespace MVC.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.Employee e)
         {
+
+            PostEmployee(e);
             return View();
         }
 
-        public ActionResult Details()
+
+        public ActionResult Edit(int id)
         {
-            return View();
+
+            Employee e = GetEmployeeById(id);
+
+            return View(e);
         }
 
-        public ActionResult Delete()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.Employee e)
         {
-            return View();
+
+            PutEmployee(e.EmployeeId, e);
+            return RedirectToAction("List");
         }
-    } 
+
+        public ActionResult Details(int id)
+        {
+            Employee e = GetEmployeeById(id);
+
+            return View(e);
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            Employee e = GetEmployeeById(id);
+            return View(e);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeleteEmployee(id);
+            return RedirectToAction("List");
+
+        }
+
+    }
 }

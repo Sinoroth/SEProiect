@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
 
         // PUT: api/WaterConsumptions/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutWaterConsumption(int id, WaterConsumption waterConsumption)
+        public IHttpActionResult PutWaterConsumption(int id, [FromBody]WaterConsumption waterConsumption)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +49,11 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(waterConsumption).State = EntityState.Modified;
+            //db.Entry(waterConsumption).State = EntityState.Modified;
+            WaterConsumption wc = db.WaterConsumptions.Find(waterConsumption.WaterConsumptionId);
+            wc.Consumption = waterConsumption.Consumption;
+            wc.PricePerUnit = waterConsumption.PricePerUnit;
+            wc.AmountOfMoneyOwed = waterConsumption.AmountOfMoneyOwed;
 
             try
             {

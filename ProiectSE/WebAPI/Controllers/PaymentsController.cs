@@ -37,7 +37,7 @@ namespace WebAPI.Controllers
 
         // PUT: api/Payments/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutPayment(int id, Payment payment)
+        public IHttpActionResult PutPayment(int id, [FromBody]Payment payment)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +49,11 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(payment).State = EntityState.Modified;
+            //db.Entry(payment).State = EntityState.Modified;
+            Payment p = db.Payments.Find(payment.PaymentId);
+            p.ServicesToBePaid = payment.ServicesToBePaid;
+            p.AmountOfMoneyToBePaid = payment.AmountOfMoneyToBePaid;
+            p.Paid = payment.Paid;
 
             try
             {

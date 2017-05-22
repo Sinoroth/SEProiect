@@ -37,7 +37,8 @@ namespace WebAPI.Controllers
 
         // PUT: api/Apartments/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutApartment(int id, Apartment apartment)
+        [HttpPut]
+        public IHttpActionResult PutApartment(int id, [FromBody]Apartment apartment)
         {
             if (!ModelState.IsValid)
             {
@@ -49,7 +50,12 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(apartment).State = EntityState.Modified;
+            //db.Entry(apartment).State = EntityState.Modified;
+            Apartment ap = db.Apartments.Find(apartment.ApartmentId);
+            ap.ApartmentNumber = apartment.ApartmentNumber;
+            ap.NumberOfOccupants = apartment.NumberOfOccupants;
+            ap.UserId = apartment.UserId;
+            ap.AmountOfMoneyOwed = apartment.AmountOfMoneyOwed;
 
             try
             {

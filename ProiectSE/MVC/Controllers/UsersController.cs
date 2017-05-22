@@ -52,13 +52,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        //public bool DeleteUser(int id, User u)
-        //{
-        //    RestClient<User> rc = new RestClient<User>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/users/";
-        //    bool response = rc.DeleteAsync(id, u);
-        //    return response;
-        //}
+        public bool DeleteUser(int id)
+        {
+            RestClient<User> rc = new RestClient<User>();
+            rc.WebServiceUrl = "http://localhost:55428/api/users/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
         public bool IsValid(string email, string pass)
         {
@@ -117,9 +117,30 @@ namespace MVC.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Register(Models.User u)
         {
-            return View();
+
+            PostUser(u);
+            return RedirectToAction("Login","Users");
+        }
+
+        public ActionResult Edit(int id)
+        {
+
+            User u = GetUserById(id);
+
+            return View(u);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.User u)
+        {
+
+            PutUser(u.UserId, u);
+            return RedirectToAction("Details");
         }
 
         public ActionResult Delete()
@@ -158,11 +179,11 @@ namespace MVC.Controllers
         }
 
         
-        [HttpPost]
-        public ActionResult Register(Models.User user)
-        {
-            return RedirectToAction("Index", "Home");
-        }
+        //[HttpPost]
+        //public ActionResult Register(Models.User user)
+        //{
+        //    return RedirectToAction("Index", "Home");
+        //}
 
         public ActionResult Logout()
         {

@@ -43,13 +43,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        //public bool DeleteWaterConsumption(int id, WaterConsumption wc)
-        //{
-        //    RestClient<WaterConsumption> rc = new RestClient<WaterConsumption>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/waterconsumptions/";
-        //    bool response = rc.DeleteAsync(id, wc);
-        //    return response;
-        //}
+        public bool DeleteWaterConsumption(int id)
+        {
+            RestClient<WaterConsumption> rc = new RestClient<WaterConsumption>();
+            rc.WebServiceUrl = "http://localhost:55428/api/waterconsumptions/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
         public ActionResult List()
         {
@@ -90,19 +90,55 @@ namespace MVC.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.WaterConsumption wc)
         {
+
+            PostWaterConsumption(wc);
             return View();
         }
 
-        public ActionResult Details()
+
+        public ActionResult Edit(int id)
         {
-            return View();
+
+            WaterConsumption wc = GetWaterConsumptionById(id);
+
+            return View(wc);
         }
 
-        public ActionResult Delete()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.WaterConsumption wc)
         {
-            return View();
+
+            PutWaterConsumption(wc.WaterConsumptionId, wc);
+            return RedirectToAction("List");
         }
+
+        public ActionResult Details(int id)
+        {
+            WaterConsumption wc = GetWaterConsumptionById(id);
+
+            return View(wc);
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            WaterConsumption wc = GetWaterConsumptionById(id);
+            return View(wc);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeleteWaterConsumption(id);
+            return RedirectToAction("List");
+
+        }
+
     }
 }

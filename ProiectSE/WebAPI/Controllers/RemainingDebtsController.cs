@@ -40,7 +40,7 @@ namespace WebAPI.Controllers
         // PUT: api/RemainingDebts/5
         [HttpPut]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutRemainingDebt(int id, RemainingDebt remainingDebt)
+        public IHttpActionResult PutRemainingDebt(int id, [FromBody]RemainingDebt remainingDebt)
         {
             if (!ModelState.IsValid)
             {
@@ -52,7 +52,11 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(remainingDebt).State = EntityState.Modified;
+            RemainingDebt rd = db.RemainingDebts.Find(remainingDebt.RemainingDebtId);
+            
+            rd.DebtTo = remainingDebt.DebtTo;
+            rd.Month = remainingDebt.Month;
+            rd.AmountOfMoneyOwed = remainingDebt.AmountOfMoneyOwed;
 
             try
             {

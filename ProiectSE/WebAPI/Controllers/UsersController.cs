@@ -47,7 +47,7 @@ namespace WebAPI.Controllers
 
         // PUT: api/Users/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutUser(int id, User user)
+        public IHttpActionResult PutUser(int id, [FromBody]User user)
         {
             if (!ModelState.IsValid)
             {
@@ -59,7 +59,12 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            db.Entry(user).State = EntityState.Modified;
+            //db.Entry(user).State = EntityState.Modified;
+            User u = db.Users.Find(user.UserId);
+            u.Name = user.Name;
+            u.Email = user.Email;
+            u.PhoneNumber = user.PhoneNumber;
+            u.Password = user.Password;
 
             try
             {

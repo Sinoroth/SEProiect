@@ -48,13 +48,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        //public bool DeleteApartment(int id, Apartment a)
-        //{
-        //    RestClient<Apartment> rc = new RestClient<Apartment>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
-        //    bool response = rc.DeleteAsync(id, a);
-        //    return response;
-        //}
+        public bool DeleteApartment(int id)
+        {
+            RestClient<Apartment> rc = new RestClient<Apartment>();
+            rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
         public ActionResult List()
         {
@@ -124,28 +124,58 @@ namespace MVC.Controllers
 
         public ActionResult Create()
         {
-
-            //PostAsync();
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.Apartment a)
         {
-            //PutAsync();
+
+            PostApartment(a);
             return View();
         }
 
-        public ActionResult Details()
+
+        public ActionResult Edit(int id)
         {
-            //Apartment apartment = new Models.Apartment();
-            //apartment = GetApartmentById(Models.Apartment.ApartmentId);
-            return View();
+
+            Apartment a = GetApartmentById(id);
+
+            return View(a);
         }
 
-        public ActionResult Delete()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.Apartment a)
         {
-            //DeleteAsync();
-            return View();
+
+            PutApartment(a.ApartmentId, a);
+            return RedirectToAction("List");
         }
+
+        public ActionResult Details(int id)
+        {
+            Apartment a = GetApartmentById(id);
+
+            return View(a);
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            Apartment a = GetApartmentById(id);
+            return View(a);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeleteApartment(id);
+            return RedirectToAction("List");
+
+        }
+
     }
 }

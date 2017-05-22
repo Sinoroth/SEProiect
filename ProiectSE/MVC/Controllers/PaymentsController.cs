@@ -43,13 +43,13 @@ namespace MVC.Controllers
             return response;
         }
 
-        //public bool DeletePayment(int id, Payment p)
-        //{
-        //    RestClient<Payment> rc = new RestClient<Payment>();
-        //    rc.WebServiceUrl = "http://localhost:55428/api/payments/";
-        //    bool response = rc.DeleteAsync(id, p);
-        //    return response;
-        //}
+        public bool DeletePayment(int id)
+        {
+            RestClient<Payment> rc = new RestClient<Payment>();
+            rc.WebServiceUrl = "http://localhost:55428/api/payments/";
+            bool response = rc.DeleteAsync(id);
+            return response;
+        }
 
         public ActionResult List()
         {
@@ -71,19 +71,55 @@ namespace MVC.Controllers
             return View();
         }
 
-        public ActionResult Edit()
+        [HttpPost]
+        public ActionResult Create(Models.Payment p)
         {
+
+            PostPayment(p);
             return View();
         }
 
-        public ActionResult Details()
+
+        public ActionResult Edit(int id)
         {
-            return View();
+
+            Payment p = GetPaymentById(id);
+
+            return View(p);
         }
 
-        public ActionResult Delete()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Models.Payment p)
         {
-            return View();
+
+            PutPayment(p.PaymentId, p);
+            return RedirectToAction("List");
         }
+
+        public ActionResult Details(int id)
+        {
+            Payment p = GetPaymentById(id);
+
+            return View(p);
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+            Payment p = GetPaymentById(id);
+            return View(p);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            DeletePayment(id);
+            return RedirectToAction("List");
+
+        }
+
     }
 }
