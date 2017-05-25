@@ -1,4 +1,4 @@
-﻿using MVC.Models;
+﻿using Data.Model;
 using Plugin.RestClient;
 using System;
 using System.Collections.Generic;
@@ -92,7 +92,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.Bill b)
+        public ActionResult Create(Bill b)
         {
 
             PostBill(b);
@@ -111,7 +111,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.Bill b)
+        public ActionResult Edit(Bill b)
         {
 
             PutBill(b.BillId, b);

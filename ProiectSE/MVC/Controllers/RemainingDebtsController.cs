@@ -1,4 +1,4 @@
-﻿using MVC.Models;
+﻿using Data.Model;
 using Newtonsoft.Json;
 using Plugin.RestClient;
 using System;
@@ -106,7 +106,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.RemainingDebt rd)
+        public ActionResult Create(RemainingDebt rd)
         {
 
             PostRemainingDebt(rd);
@@ -125,7 +125,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.RemainingDebt rd)
+        public ActionResult Edit(RemainingDebt rd)
         {
 
             PutRemainingDebt(rd.RemainingDebtId, rd);

@@ -1,4 +1,4 @@
-﻿using MVC.Models;
+﻿using Data.Model;
 using Plugin.RestClient;
 using System;
 using System.Collections.Generic;
@@ -25,7 +25,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.User u)
+        public ActionResult Create(User u)
         {
 
             PostUser(u);

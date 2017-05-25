@@ -525,3 +525,5 @@ C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft
 C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\Iulia\documents\visual studio 2017\Projects\ProiectSE\MVC\obj\Debug\MVC.csprojResolveAssemblyReference.cache
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\Data.Model.dll
+C:\Users\Iulia\Documents\Visual Studio 2017\Projects\ProiectSE\MVC\bin\Data.Model.pdb

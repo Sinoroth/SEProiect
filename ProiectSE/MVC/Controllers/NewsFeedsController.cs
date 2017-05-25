@@ -1,4 +1,4 @@
-﻿using MVC.Models;
+﻿using Data.Model;
 using Plugin.RestClient;
 using System;
 using System.Collections.Generic;
@@ -71,7 +71,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.NewsFeed nf)
+        public ActionResult Create(NewsFeed nf)
         {
 
             PostNewsFeed(nf);
@@ -90,7 +90,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.NewsFeed nf)
+        public ActionResult Edit(NewsFeed nf)
         {
 
             PutNewsFeed(nf.NewsFeedId, nf);

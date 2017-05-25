@@ -1,4 +1,4 @@
-﻿using MVC.Models;
+﻿using Data.Model;
 using Newtonsoft.Json;
 using Plugin.RestClient;
 using System;
@@ -78,7 +78,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.Contract c)
+        public ActionResult Create(Contract c)
         {
 
             PostContract(c);
@@ -97,7 +97,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.Contract c)
+        public ActionResult Edit(Contract c)
         {
 
             PutContract(c.ContractId, c);

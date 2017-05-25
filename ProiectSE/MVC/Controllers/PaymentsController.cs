@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVC.Models;
+using Data.Model;
 using Plugin.RestClient;
 
 namespace MVC.Controllers
@@ -91,7 +91,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.Payment p)
+        public ActionResult Create(Payment p)
         {
 
             PostPayment(p);
@@ -110,7 +110,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.Payment p)
+        public ActionResult Edit(Payment p)
         {
 
             PutPayment(p.PaymentId, p);

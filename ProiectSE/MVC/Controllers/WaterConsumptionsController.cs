@@ -1,4 +1,4 @@
-﻿using MVC.Models;
+﻿using Data.Model;
 using Plugin.RestClient;
 using System;
 using System.Collections.Generic;
@@ -91,7 +91,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.WaterConsumption wc)
+        public ActionResult Create(WaterConsumption wc)
         {
 
             PostWaterConsumption(wc);
@@ -110,7 +110,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.WaterConsumption wc)
+        public ActionResult Edit(WaterConsumption wc)
         {
 
             PutWaterConsumption(wc.WaterConsumptionId, wc);

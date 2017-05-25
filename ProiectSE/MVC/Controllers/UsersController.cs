@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVC.Models;
+using Data.Model;
 using System.Web.Security;
 using Plugin.RestClient;
 
@@ -100,7 +100,7 @@ namespace MVC.Controllers
             //user.Role = "user";
             //List<User> userList = new List<User>();
             //userList.Add(user);
-            //User user = new Models.User();
+            //User user = new User();
 
             //user = GetUserById(user.UserId);
             //if (Request.Cookies["UserCookie"] != null)
@@ -118,7 +118,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Register(Models.User u)
+        public ActionResult Register(User u)
         {
 
             PostUser(u);
@@ -136,7 +136,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.User u)
+        public ActionResult Edit(User u)
         {
 
             PutUser(u.UserId, u);
@@ -155,7 +155,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(Models.User user)
+        public ActionResult Login(User user)
         {
             if (ModelState.IsValid)
             {

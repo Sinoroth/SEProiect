@@ -1,4 +1,4 @@
-﻿using MVC.Models;
+﻿using Data.Model;
 using Newtonsoft.Json;
 using Plugin.RestClient;
 using System;
@@ -128,7 +128,7 @@ namespace MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Models.Apartment a)
+        public ActionResult Create(Apartment a)
         {
 
             PostApartment(a);
@@ -147,7 +147,7 @@ namespace MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Models.Apartment a)
+        public ActionResult Edit(Apartment a)
         {
 
             PutApartment(a.ApartmentId, a);
