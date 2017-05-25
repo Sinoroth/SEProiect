@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace UnitTests
 {
+
     [TestClass]
     public class ApartmentsTest
     {
@@ -20,7 +21,7 @@ namespace UnitTests
             //-call web api to get info
             //-compare web api get result with added data
             List<Apartment> testData = new List<Apartment>();
-            testData.Add(new Apartment {ApartmentNumber="12", NumberOfOccupants=2 });
+            testData.Add(new Apartment { ApartmentNumber = "12", NumberOfOccupants = 2, AmountOfMoneyOwed = 4, new Bill { BillType = "gas", Month = "may", AmountOfMoneyOwed=4 },new Payments { ServicesToBePaid="gas", AmountOfMoneyToBePaid=4, Paid="yes" },new RemainingDebts { DebtTo="electricity", Month="may", AmountOfMoneyOwed=4 }, new WaterConsumption { PricePerUnit=2, Consumption=10, AmountOfMoneyOwed=20 } });
             foreach (var ap in testData)
                 rc.PostAsync(ap);
 
