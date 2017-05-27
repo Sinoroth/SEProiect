@@ -68,6 +68,7 @@
     <Compile Include="RestClient\TaskModel.cs" />
     <Compile Include="ApartmentsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersTest.cs" />
     <Compile Include="WaterConsumptionsTest.cs" />
   </ItemGroup>
   <ItemGroup>

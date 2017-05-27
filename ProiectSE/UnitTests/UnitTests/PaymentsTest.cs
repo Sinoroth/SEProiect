@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Data.Model;
+using Plugin.RestClient;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
     [TestClass]
-    class PaymentsTest
+    public class PaymentsTest
     {
         [TestMethod]
-        public void TestMethodGetAll()
+        public void TestMethodGetAllPayments()
         {
             RestClient<Payment> rc = new RestClient<Payment>();
             rc.WebServiceUrl = "http://localhost:55428/api/payments/";
@@ -21,7 +23,7 @@ namespace UnitTests
             //-call web api to get info
             //-compare web api get result with added data
             List<Payment> testData = new List<Payment>();
-            testData.Add(new Payments { ServicesToBePaid = "gas", AmountOfMoneyToBePaid = 4, Paid = "yes" });
+            testData.Add(new Payment {ApartmentId = 12, ServicesToBePaid = "gas", AmountOfMoneyToBePaid = 4, Paid = "yes" });
             foreach (var p in testData)
                 rc.PostAsync(p);
 

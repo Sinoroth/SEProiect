@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Data.Model;
+using Plugin.RestClient;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
     [TestClass]
-    class BillsTest
+    public class BillsTest
     {
         [TestMethod]
-        public void TestMethodGetAll()
+        public void TestMethodGetAllBills()
         {
             RestClient<Bill> rc = new RestClient<Bill>();
             rc.WebServiceUrl = "http://localhost:55428/api/bills/";
@@ -21,7 +23,7 @@ namespace UnitTests
             //-call web api to get info
             //-compare web api get result with added data
             List<Bill> testData = new List<Bill>();
-            testData.Add( new Bill { BillType = "gas", Month = "may", AmountOfMoneyOwed = 4});
+            testData.Add( new Bill { ApartmentId = 12, BillType = "gas", Month = "may", AmountOfMoneyOwed = 4});
             foreach (var b in testData)
                 rc.PostAsync(b);
 

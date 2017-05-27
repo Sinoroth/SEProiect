@@ -11,7 +11,7 @@ namespace UnitTests
     public class ApartmentsTest
     {
         [TestMethod]
-        public void TestMethodGetAll()
+        public void TestMethodGetAllApartments()
         {
             RestClient<Apartment> rc = new RestClient<Apartment>();
             rc.WebServiceUrl = "http://localhost:55428/api/apartments/";
@@ -21,7 +21,7 @@ namespace UnitTests
             //-call web api to get info
             //-compare web api get result with added data
             List<Apartment> testData = new List<Apartment>();
-            testData.Add(new Apartment { ApartmentNumber = "12", NumberOfOccupants = 2, AmountOfMoneyOwed = 4, new Bill { BillType = "gas", Month = "may", AmountOfMoneyOwed=4 },new Payments { ServicesToBePaid="gas", AmountOfMoneyToBePaid=4, Paid="yes" },new RemainingDebts { DebtTo="electricity", Month="may", AmountOfMoneyOwed=4 }, new WaterConsumption { PricePerUnit=2, Consumption=10, AmountOfMoneyOwed=20 } });
+            testData.Add(new Apartment { ApartmentNumber = "12", UserId = 6, NumberOfOccupants = 2, AmountOfMoneyOwed = 4 });
             foreach (var ap in testData)
                 rc.PostAsync(ap);
 

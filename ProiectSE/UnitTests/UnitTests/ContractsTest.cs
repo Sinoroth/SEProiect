@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Data.Model;
+using Plugin.RestClient;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
 {
     [TestClass]
-    class ContractsTest
+    public class ContractsTest
     {
         [TestMethod]
-        public void TestMethodGetAll()
+        public void TestMethodGetAllContracts()
         {
             RestClient<Contract> rc = new RestClient<Contract>();
             rc.WebServiceUrl = "http://localhost:55428/api/contracts/";
