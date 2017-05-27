@@ -23,7 +23,7 @@ namespace UnitTests
             //-call web api to get info
             //-compare web api get result with added data
             List<WaterConsumption> testData = new List<WaterConsumption>();
-            testData.Add(new WaterConsumption {ApartmentId = 12, PricePerUnit = 2, Consumption = 10, AmountOfMoneyOwed = 20 });
+            testData.Add(new WaterConsumption {ApartmentId = 13, PricePerUnit = 2, Consumption = 10, AmountOfMoneyOwed = 20 });
             foreach (var wc in testData)
                 rc.PostAsync(wc);
 

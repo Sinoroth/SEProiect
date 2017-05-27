@@ -23,7 +23,7 @@ namespace UnitTests
             //-call web api to get info
             //-compare web api get result with added data
             List<Payment> testData = new List<Payment>();
-            testData.Add(new Payment {ApartmentId = 12, ServicesToBePaid = "gas", AmountOfMoneyToBePaid = 4, Paid = "yes" });
+            testData.Add(new Payment {ApartmentId = 13, ServicesToBePaid = "gas", AmountOfMoneyToBePaid = 4, Paid = "yes" });
             foreach (var p in testData)
                 rc.PostAsync(p);
 
